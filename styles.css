@@ -2,7 +2,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family:Verdana, Geneva, Tahoma, sans-serif;
+  font-family: 'Arial', sans-serif;
   background-color: transparent;
 }
 html , body{
@@ -121,7 +121,6 @@ svg text.dot {
   font-weight: 400;
   font-size: 3.5vw;
   line-height: 3.8vw;
-  font-family: monument;
 }
 
 .heights{
@@ -244,7 +243,6 @@ nav button {
   /* box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5); */
   width: auto;
   max-width: 80%;
-  font-family:Verdana, Geneva, Tahoma, sans-serif
 }
 
 .hero-content h1 {
@@ -850,3 +848,4 @@ nav button {
 #youtubeBtn {
   bottom: 300px;
 }
+
