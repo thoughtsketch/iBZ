@@ -91,3 +91,28 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 });
+
+
+//hero carousel
+
+const carouselBody = document.getElementById("carouselBody");
+  const slides = document.querySelectorAll(".hs-carousel-slide");
+  const totalSlides = slides.length;
+  let currentIndex = 0;
+
+  function updateCarousel() {
+    carouselBody.style.transform = `translateX(-${currentIndex * 100}%)`;
+  }
+
+  function nextSlide() {
+    currentIndex = (currentIndex + 1) % totalSlides;
+    updateCarousel();
+  }
+
+  document.getElementById("nextBtn").addEventListener("click", nextSlide);
+  document.getElementById("prevBtn").addEventListener("click", () => {
+    currentIndex = (currentIndex - 1 + totalSlides) % totalSlides;
+    updateCarousel();
+  });
+
+  setInterval(nextSlide, 3000); // Auto-scroll every 3 seconds
