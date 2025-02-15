@@ -849,3 +849,153 @@ nav button {
   bottom: 300px;
 }
 
+.services {
+  width: 100%;
+  background-color: white;
+  padding: 5vh 5vw;
+}
+
+.services-title {
+  font-size: 2rem;
+}
+
+/* Services Header */
+.services-header {
+  text-align: center;
+  margin-bottom: 2vh;
+}
+
+/* Badge */
+.badge {
+  display: inline-block;
+  background-color: #255a34;
+  color: white;
+  padding: 0.625em 2.5em;
+  border-radius: 1rem;
+  margin-bottom: 2rem;
+  font-weight: bold;
+  font-size: 2rem;
+}
+
+/* Heading */
+h2 {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-top: 0.625rem;
+  color: #333;
+  text-align: center;
+}
+
+/* Service Item */
+.service-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-top: 0.125rem solid #ccc;
+  padding: 3vh 5vw;
+  width: 100%;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+/* Hover effect */
+.service-item:hover {
+  background-color: #c0d4c6;
+  transform: scale(1.02);
+}
+
+/* Service Number */
+.service-number {
+  font-size: 3rem;
+  font-weight: bold;
+  color: #333;
+  flex: 1;
+  text-align: left;
+}
+
+/* Service Title */
+.service-title {
+  font-size: 2rem;
+  font-weight: bold;
+  flex: 2;
+  text-align: left;
+  color: #29643a;
+}
+
+/* Service Description */
+.service-description {
+  font-size: 1.4rem;
+  color: #666;
+  flex: 3;
+  text-align: left;
+}
+
+/* RESPONSIVE DESIGN */
+@media (max-width: 1024px) {
+  .services {
+      padding: 4vh 5vw;
+  }
+
+  .service-item {
+      flex-direction: column;
+      text-align: center;
+      gap: 1.5rem;
+  }
+
+  .service-number,
+  .service-title,
+  .service-description {
+      text-align: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .services-title,
+  h2 {
+      font-size: 1.75rem;
+  }
+
+  .badge {
+      font-size: 1rem;
+      padding: 0.5em 2em;
+  }
+
+  .service-number {
+      font-size: 2.5rem;
+  }
+
+  .service-title {
+      font-size: 1.375rem;
+  }
+
+  .service-description {
+      font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .services {
+      padding: 3vh 4vw;
+  }
+
+  .services-title,
+  h2 {
+      font-size: 1.5rem;
+  }
+
+  .badge {
+      font-size: 1.5rem;
+      padding: 0.5em 1.5em;
+  }
+
+  .service-number {
+      font-size: 2rem;
+  }
+
+  .service-title {
+      font-size: 1.25rem;
+  }
+
+  .service-description {
+      font-size: 0.875rem;
+  }
+}
