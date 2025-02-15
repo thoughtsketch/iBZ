@@ -70,3 +70,24 @@ tl2.to(".quote-container h4 span", {
 })
 
 
+document.addEventListener("DOMContentLoaded", function () {
+  const buttons = document.querySelectorAll("[data-hs-tab]");
+  const tabs = document.querySelectorAll("[role='tabpanel']");
+
+  buttons.forEach((button) => {
+    button.addEventListener("click", function () {
+      // Remove "active" class from all buttons
+      buttons.forEach((btn) => btn.classList.remove("active"));
+
+      // Hide all tab contents
+      tabs.forEach((tab) => tab.classList.add("hidden"));
+
+      // Add "active" class to the clicked button
+      this.classList.add("active");
+
+      // Show the corresponding image
+      const targetTab = document.querySelector(this.getAttribute("data-hs-tab"));
+      targetTab.classList.remove("hidden");
+    });
+  });
+});
