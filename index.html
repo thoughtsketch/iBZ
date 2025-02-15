@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>iBZ</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body>
+    <!-- navbar -->
+
+    <header class="navbar hidden lg:flex">
+      <div class="logo">
+        <img src="./assets/images/logo1.webp" alt="Krishnav Developers Logo" />
+      </div>
+      <nav class="menu hidden lg:flex">
+        <ul>
+          <li><a href="#hero" class="active">Home</a></li>
+          <li><a href="#about">About Us</a></li>
+          <li><a href="#gallery">Gallery</a></li>
+          <li><a href="#location">Location</a></li>
+          <li><a href="#contact" id="contactUsLink">Contact Us</a></li>
+          <li><a href="tel:+91 9742069669"> +91 9742069669 </a></li>
+        </ul>
+      </nav>
+      <div class="logo">
+        <img src="./assets/images/logo2.webp" alt="Golden Jejuri Logo" />
+      </div>
+    </header>
+
+    <nav
+      class="w-full lg:hidden h-16 bg-white flex items-center justify-between px-6 shadow-lg relative"
+    >
+      <!-- Logo for Mobile View -->
+      <img
+        src="./assets/images/logo2.webp"
+        alt="Golden Jejuri Logo"
+        class="h-16 lg:hidden"
+      />
+
+      <!-- Navigation Links for Larger Screens -->
+      <div class="part2 hidden lg:flex space-x-8">
+        <h4 class="hover:text-yellow-700 cursor-pointer">About Us</h4>
+        <h4 class="hover:text-yellow-700 cursor-pointer">Services</h4>
+        <h4 class="hover:text-yellow-700 cursor-pointer">Use Cases</h4>
+        <h4 class="hover:text-yellow-700 cursor-pointer">Pricing</h4>
+        <h4 class="hover:text-yellow-700 cursor-pointer">Blog</h4>
+        <button class="px-4 py-2 rounded-lg">Request a quote</button>
+
+        <!-- Phone Number in Desktop View -->
+      </div>
+
+      <!-- Mobile Menu -->
+      <div class="mobile_menu lg:hidden">
+        <details
+          class="relative"
+          ontoggle="this.open ? this.classList.add('bg-yellow-500') : this.classList.remove('bg-yellow-500')"
+        >
+          <summary class="menu cursor-pointer">
+            <i class="ri-menu-3-line text-2xl"></i>
+          </summary>
+          <div
+            class="absolute right-0 top-full mt-2 w-[80vw] bg-yellow-500 rounded-lg shadow-lg py-4 flex flex-col items-center space-y-4 z-10"
+          >
+            <a
+              href="#hero"
+              class="hover:text-yellow-700 text-white cursor-pointer"
+              >Home</a
+            >
+            <a
+              href="#about"
+              class="hover:text-yellow-700 text-white cursor-pointer"
+              >About</a
+            >
+            <a
+              href="#gallery"
+              class="hover:text-yellow-700 text-white cursor-pointer"
+              >Gallery</a
+            >
+            <a
+              href="#location"
+              class="hover:text-yellow-700 text-white cursor-pointer"
+              >Location</a
+            >
+            <a
+              href="#contact"
+              class="hover:text-yellow-700 text-white cursor-pointer"
+              >Contact</a
+            >
+          </div>
+        </details>
+      </div>
+    </nav>
+
+    <main>
+        <section class="about-section" id="about">
+            <div class="left-content">
+              <span class="custom-benefit">ABOUT US</span>
+              <h1>
+                TURNING EVERY <br />
+                ACRE INTO <span class="highlight">GOLD</span> JEJURI'S NEXT
+                <span class="highlight">BIG LEAP</span> FOR A DECADE.
+              </h1>
+              <button class="btn">Download Brochure</button>
+            </div>
+            <div class="right-content">
+              <h2>
+                <span class="gold">Golden Jejuri:</span> Pune's Next Growth Corridor
+              </h2>
+              <br />
+              <p>
+                Golden Jejuri is a visionary real estate initiative in Jejuri, Pune,
+                offering premium NA plots in Jejuri for Non-Agricultural purposes.
+                These plots in Jejuri are ready-to-build and designed to cater to
+                both residential and commercial needs, featuring top-tier
+                infrastructure and a harmonious blend of natural and urban living.
+                The location boasts a rich cultural heritage, with proximity to the
+                Khandoba Temple and Morgaon Ganpati Temple. Additionally, the scenic
+                beauty of NA plots in Jejuri includes stunning views of the Nazare
+                Dam and the surrounding mountains.
+              </p>
+              <div class="stats">
+                <div class="stat-item">
+                  <h2>10+</h2>
+                  <p>Family-Centric Comforts</p>
+                </div>
+                <div class="stat-item">
+                  <h2>30+</h2>
+                  <p>Golden Amenities</p>
+                </div>
+                <div class="stat-item">
+                  <h2>15+</h2>
+                  <p>Recreational Treasures</p>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          
+    </main>
+    <script src="scripts.js"></script>
+  </body>
+</html>
