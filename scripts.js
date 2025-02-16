@@ -21,7 +21,7 @@ var tl = gsap.timeline()
 
 tl.to(".loader-container,.loader-container svg", {
   top: -1200,
-  delay: 1,
+  delay: 0.1,
   duration: 0.2,
 })
 
