@@ -1,1668 +1,1288 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>iBZ</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="stylesheet" href="index.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.css"
-    />
-    <script src="https://cdn.tailwindcss.com"></script>
-  </head>
 
-  <body>
-    <div class="crsr"></div>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>iBZ</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="stylesheet" href="index.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.css" />
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
 
-    <main>
-      <!-- LOADER -->
-      <div class="loader-container">
-        <svg viewbox="0 0 400 160">
-          <text
-            x="50%"
-            y="50%"
-            dy=".32rem"
-            text-anchor="middle"
-            class="text-body"
-          >
-            iBZ
-          </text>
-          <text
-            x="50%"
-            y="50%"
-            dy=".32rem"
-            dx="3.2em"
-            text-anchor="middle"
-            class="text-body"
-          ></text>
-        </svg>
+<body>
+  <div class="crsr"></div>
+
+  <main>
+    <!-- LOADER -->
+    <div class="loader-container">
+      <svg viewbox="0 0 400 160">
+        <text x="50%" y="50%" dy=".32rem" text-anchor="middle" class="text-body">
+          iBZ
+        </text>
+        <text x="50%" y="50%" dy=".32rem" dx="3.2em" text-anchor="middle" class="text-body"></text>
+      </svg>
+    </div>
+
+    <!-- NAVBAR -->
+
+    <header class="navbar hidden lg:flex">
+      <div class="logo">
+        <img src="./assets/images/logo1.webp" alt="Krishnav Developers Logo" />
       </div>
-
-      <!-- NAVBAR -->
-
-      <header class="navbar hidden lg:flex">
-        <div class="logo">
-          <img
-            src="./assets/images/logo1.webp"
-            alt="Krishnav Developers Logo"
-          />
-        </div>
-        <nav class="menu hidden lg:flex">
-          <ul>
-            <li><a href="#hero" class="active">Home</a></li>
-            <li><a href="#about">About Us</a></li>
-            <li><a href="#gallery">Gallery</a></li>
-            <li><a href="#location">Location</a></li>
-            <li><a href="#contact" id="contactUsLink">Contact Us</a></li>
-            <li><a href="tel:+91 9742069669"> +91 9742069669 </a></li>
-          </ul>
-        </nav>
-        <div class="logo">
-          <img src="./assets/images/logo2.webp" alt="Golden Jejuri Logo" />
-        </div>
-      </header>
-
-      <nav
-        class="w-full lg:hidden h-16 bg-white flex items-center justify-between px-6 shadow-lg relative"
-      >
-        <!-- Logo for Mobile View -->
-        <img
-          src="./assets/images/logo2.webp"
-          alt="Golden Jejuri Logo"
-          class="h-16 lg:hidden"
-        />
-
-        <!-- Navigation Links for Larger Screens -->
-        <div class="part2 hidden lg:flex space-x-8">
-          <h4 class="hover:text-yellow-700 cursor-pointer">About Us</h4>
-          <h4 class="hover:text-yellow-700 cursor-pointer">Services</h4>
-          <h4 class="hover:text-yellow-700 cursor-pointer">Use Cases</h4>
-          <h4 class="hover:text-yellow-700 cursor-pointer">Pricing</h4>
-          <h4 class="hover:text-yellow-700 cursor-pointer">Blog</h4>
-          <button class="px-4 py-2 rounded-lg">Request a quote</button>
-
-          <!-- Phone Number in Desktop View -->
-        </div>
-
-        <!-- Mobile Menu -->
-        <div class="mobile_menu lg:hidden">
-          <details
-            class="relative"
-            ontoggle="this.open ? this.classList.add('bg-yellow-500') : this.classList.remove('bg-yellow-500')"
-          >
-            <summary class="menu cursor-pointer">
-              <i class="ri-menu-3-line text-2xl"></i>
-            </summary>
-            <div
-              class="absolute right-0 top-full mt-2 w-[80vw] bg-yellow-500 rounded-lg shadow-lg py-4 flex flex-col items-center space-y-4 z-10"
-            >
-              <a
-                href="#hero"
-                class="hover:text-yellow-700 text-white cursor-pointer"
-                >Home</a
-              >
-              <a
-                href="#about"
-                class="hover:text-yellow-700 text-white cursor-pointer"
-                >About</a
-              >
-              <a
-                href="#gallery"
-                class="hover:text-yellow-700 text-white cursor-pointer"
-                >Gallery</a
-              >
-              <a
-                href="#location"
-                class="hover:text-yellow-700 text-white cursor-pointer"
-                >Location</a
-              >
-              <a
-                href="#contact"
-                class="hover:text-yellow-700 text-white cursor-pointer"
-                >Contact</a
-              >
-            </div>
-          </details>
-        </div>
+      <nav class="menu hidden lg:flex">
+        <ul>
+          <li><a href="#hero" class="active">Home</a></li>
+          <li><a href="#about">About Us</a></li>
+          <li><a href="#gallery">Gallery</a></li>
+          <li><a href="#location">Location</a></li>
+          <li><a href="#contact" id="contactUsLink">Contact Us</a></li>
+          <li><a href="tel:+91 9742069669"> +91 9742069669 </a></li>
+        </ul>
       </nav>
+      <div class="logo">
+        <img src="./assets/images/logo2.webp" alt="Golden Jejuri Logo" />
+      </div>
+    </header>
 
-      <!-- Hero -->
-      <div class="px-4 sm:px-6 lg:px-8 py-10">
-        <div class="relative">
+    <nav class="w-full lg:hidden h-16 bg-white flex items-center justify-between px-6 shadow-lg relative">
+      <!-- Logo for Mobile View -->
+      <img src="./assets/images/logo2.webp" alt="Golden Jejuri Logo" class="h-16 lg:hidden" />
+
+      <!-- Navigation Links for Larger Screens -->
+      <div class="part2 hidden lg:flex space-x-8">
+        <h4 class="hover:text-yellow-700 cursor-pointer">About Us</h4>
+        <h4 class="hover:text-yellow-700 cursor-pointer">Services</h4>
+        <h4 class="hover:text-yellow-700 cursor-pointer">Use Cases</h4>
+        <h4 class="hover:text-yellow-700 cursor-pointer">Pricing</h4>
+        <h4 class="hover:text-yellow-700 cursor-pointer">Blog</h4>
+        <button class="px-4 py-2 rounded-lg">Request a quote</button>
+
+        <!-- Phone Number in Desktop View -->
+      </div>
+
+      <!-- Mobile Menu -->
+      <div class="mobile_menu lg:hidden">
+        <details class="relative"
+          ontoggle="this.open ? this.classList.add('bg-yellow-500') : this.classList.remove('bg-yellow-500')">
+          <summary class="menu cursor-pointer">
+            <i class="ri-menu-3-line text-2xl"></i>
+          </summary>
           <div
-            class="hs-carousel relative overflow-hidden w-full h-[30rem] md:h-[calc(100vh-106px)] bg-gray-100 rounded-2xl"
-          >
-            <div
-              class="hs-carousel-body flex transition-transform duration-700"
-              id="carouselBody"
-            >
-              <!-- Item -->
-              <div class="hs-carousel-slide flex-shrink-0 w-full">
-                <div
-                  class="h-[30rem] md:h-[calc(100vh-106px)] flex flex-col bg-[url('./assets/images/hero1.webp')] bg-cover bg-center bg-no-repeat"
-                >
-                  <div
-                    class="mt-auto w-2/3 md:max-w-lg ps-5 pb-5 md:ps-10 md:pb-10"
-                  >
-                    <span class="block text-white">Nike React</span>
-                    <span class="block text-white text-xl md:text-3xl"
-                      >Rewriting sport's playbook for billions of athletes</span
-                    >
-                    <div class="mt-5">
-                      <a
-                        class="py-2 px-3 inline-flex items-center gap-x-2 text-sm font-medium rounded-xl bg-white border border-transparent text-black hover:bg-gray-100"
-                        href="#"
-                        >Read Case Studies</a
-                      >
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <!-- End Item -->
-
-              <!-- Item -->
-              <div class="hs-carousel-slide flex-shrink-0 w-full">
-                <div
-                  class="h-[30rem] md:h-[calc(100vh-106px)] flex flex-col bg-[url('./assets/images/hero2.webp')] bg-cover bg-center bg-no-repeat"
-                >
-                  <div
-                    class="mt-auto w-2/3 md:max-w-lg ps-5 pb-5 md:ps-10 md:pb-10"
-                  >
-                    <span class="block text-white">CoolApps</span>
-                    <span class="block text-white text-xl md:text-3xl"
-                      >From mobile apps to gaming consoles</span
-                    >
-                    <div class="mt-5">
-                      <a
-                        class="py-2 px-3 inline-flex items-center gap-x-2 text-sm font-medium rounded-xl bg-white border border-transparent text-black hover:bg-gray-100"
-                        href="#"
-                        >Read Case Studies</a
-                      >
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <!-- End Item -->
-            </div>
+            class="absolute right-0 top-full mt-2 w-[80vw] bg-yellow-500 rounded-lg shadow-lg py-4 flex flex-col items-center space-y-4 z-10">
+            <a href="#hero" class="hover:text-yellow-700 text-white cursor-pointer">Home</a>
+            <a href="#about" class="hover:text-yellow-700 text-white cursor-pointer">About</a>
+            <a href="#gallery" class="hover:text-yellow-700 text-white cursor-pointer">Gallery</a>
+            <a href="#location" class="hover:text-yellow-700 text-white cursor-pointer">Location</a>
+            <a href="#contact" class="hover:text-yellow-700 text-white cursor-pointer">Contact</a>
           </div>
-
-          <!-- Arrows -->
-          <button
-            id="prevBtn"
-            class="absolute inset-y-0 start-0 w-12 h-full text-black hover:bg-white/20 rounded-s-2xl"
-          >
-            &#9664;
-          </button>
-          <button
-            id="nextBtn"
-            class="absolute inset-y-0 end-0 w-12 h-full text-black hover:bg-white/20"
-          >
-            &#9654;
-          </button>
-        </div>
+        </details>
       </div>
+    </nav>
 
-      <!-- QUOTE-TEXT -->
-
-      <section>
-        <!-- <div class="height"></div> -->
-        <div class="quote-container">
-          <h4>
-            " The Future Of Business Starts Here at iBZ" "An Investment Beyond
-            Boundaries"
-          </h4>
-          <h4>-iLife Business Zone</h4>
-        </div>
-      </section>
-
-      <!-- ABOUT1 -->
-      <div
-        class="2xl:w-[100%] h-[70vh] mx-auto px-4 sm:px-6 lg:px-24 flex justify-center items-center"
-      >
-        <!-- Grid -->
-        <div class="grid lg:grid-cols-6 lg:gap-x-8 xl:gap-x-12 lg:items-center">
-          <div class="lg:col-span-3">
-            <img
-              class="w-full rounded-xl mb-8"
-              src="./assets/images/hero1.webp"
-              alt="Hero Image"
-            />
-          </div>
-
-          <div class="lg:col-span-3">
-            <h1
-              class="block text-3xl font-bold text-gray-800 sm:text-4xl md:text-5xl lg:text-6xl"
-            >
-              A Landmark Of Prestige & Growth
-            </h1>
-            <p class="mt-3 text-lg text-gray-800">
-              Wagholi, situated in the eastern corridor of Pune, has transformed
-              into one of the most sought-after real estate destinations.
-              Historically known for its rich cultural heritage and temples, the
-              area is now a burgeoning residential and commercial hub. With
-              proximity to Pune city and an expanding infrastructure network,
-              Wagholi is emerging as a preferred choice for homebuyers and
-              businesses alike.
-            </p>
-
-            <div
-              class="mt-5 lg:mt-8 flex flex-col items-center gap-2 sm:flex-row sm:gap-3"
-            >
-              <a
-                class="w-full sm:w-auto py-3 px-4 inline-flex justify-center items-center gap-x-2 text-md font-medium rounded-full border border-transparent bg-blue-600 text-white hover:bg-blue-700 focus:outline-none focus:bg-blue-700 disabled:opacity-50 disabled:pointer-events-none"
-                href="#"
-              >
-                Schedule a visit
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- ABOUT2 -->
-
-      <div
-        class="2xl:w-[100%] h-[70vh] mx-auto px-4 sm:px-6 lg:px-24 flex justify-center items-center"
-      >
-        <!-- Grid -->
-        <div class="grid lg:grid-cols-6 lg:gap-x-8 xl:gap-x-12 lg:items-center">
-          <div class="lg:col-span-3">
-            <h1
-              class="block text-3xl font-bold text-gray-800 sm:text-4xl md:text-5xl lg:text-6xl"
-            >
-              Pune’s Next Big Investment Hub
-            </h1>
-            <p class="mt-3 text-lg text-gray-800">
-              This suburb is strategically located on Nagar Road, providing
-              seamless connectivity to key areas like Kharadi, Viman Nagar,
-              Hadapsar, and Pune Airport. The IT and business hubs of
-              Magarpatta, EON IT Park, and World Trade Center are just a short
-              drive away, making it an attractive destination for professionals
-              and investors. Wagholi&#39;s rapid development is complemented by
-              a host of amenities such as reputed schools, colleges, hospitals,
-              and shopping complexes, making it a self-sufficient locality.
-              Additionally, upcoming infrastructural projects, including metro
-              connectivity and road widening, are poised to enhance the
-              area&#39;s growth potential further.
-            </p>
-
-            <div
-              class="mt-5 lg:mt-8 flex flex-col items-center gap-2 sm:flex-row sm:gap-3"
-            >
-              <a
-                class="w-full sm:w-auto py-3 px-4 inline-flex justify-center items-center gap-x-2 text-md font-medium rounded-full border border-transparent bg-blue-600 text-white hover:bg-blue-700 focus:outline-none focus:bg-blue-700 disabled:opacity-50 disabled:pointer-events-none"
-                href="#"
-              >
-                Schedule a visit
-              </a>
-            </div>
-          </div>
-
-          <div class="lg:col-span-3 mt-10 lg:mt-0">
-            <img
-              class="w-full rounded-xl mb-8"
-              src="./assets/images/hero1.webp"
-              alt="Hero Image"
-            />
-          </div>
-        </div>
-      </div>
-
-      <!-- SERVICES -->
-
-      <section class="services">
-        <div class="services-header">
-          <span class="badge">A Business Hub with Unlimited Potential</span>
-          <!-- <span class="services-title">Why Bhavdhan is a Great Location</span> -->
-        </div>
-
-        <div class="service-item">
-          <div class="service-number">01</div>
-          <div class="service-title">Right on Nagar Road</div>
-          <div class="service-description">
-            Offering massive visibility, high foot traffic, and a prestigious
-            address for unmatched business growth.
-          </div>
-        </div>
-
-        <div class="service-item">
-          <div class="service-number">02</div>
-          <div class="service-title">Assured Rental Returns</div>
-          <div class="service-description">
-            Experiencing high demand from IT companies and businesses, making it
-            a prime commercial destination
-          </div>
-        </div>
-
-        <div class="service-item">
-          <div class="service-number">03</div>
-          <div class="service-title">Future Ready Infrastructure</div>
-          <div class="service-description">
-            Featuring smart design, high-speed elevators, and world-class
-            security for a seamless business experience
-          </div>
-        </div>
-
-        <div class="service-item">
-          <div class="service-number">04</div>
-          <div class="service-title">Flexible Spaces</div>
-          <div class="service-description">
-            Bringing together retail, corporate offices, healthcare, and
-            startups—all under one roof for a dynamic business ecosystem
-          </div>
-        </div>
-      </section>
-
-      <!-- Infrastructure -->
-      <div
-        class="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20"
-      >
+    <!-- Hero -->
+    <div class="px-4 sm:px-6 lg:px-8 py-10">
+      <div class="relative">
         <div
-          class="max-w-xl mb-10 md:mx-auto sm:text-center lg:max-w-2xl md:mb-12"
-        >
-          <div>
-            <p
-              class="inline-block px-3 py-px mb-4 text-xs font-semibold tracking-wider text-teal-900 uppercase rounded-full bg-teal-accent-400"
-            >
-              Infrastructure
-            </p>
+          class="hs-carousel relative overflow-hidden w-full h-[30rem] md:h-[calc(100vh-106px)] bg-gray-100 rounded-2xl">
+          <div class="hs-carousel-body flex transition-transform duration-700" id="carouselBody">
+            <!-- Item -->
+            <div class="hs-carousel-slide flex-shrink-0 w-full">
+              <div
+                class="h-[30rem] md:h-[calc(100vh-106px)] flex flex-col bg-[url('./assets/images/hero1.webp')] bg-cover bg-center bg-no-repeat">
+                <div class="mt-auto w-2/3 md:max-w-lg ps-5 pb-5 md:ps-10 md:pb-10">
+                  <span class="block text-white">Nike React</span>
+                  <span class="block text-white text-xl md:text-3xl">Rewriting sport's playbook for billions of
+                    athletes</span>
+                  <div class="mt-5">
+                    <a class="py-2 px-3 inline-flex items-center gap-x-2 text-sm font-medium rounded-xl bg-white border border-transparent text-black hover:bg-gray-100"
+                      href="#">Read Case Studies</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- End Item -->
+
+            <!-- Item -->
+            <div class="hs-carousel-slide flex-shrink-0 w-full">
+              <div
+                class="h-[30rem] md:h-[calc(100vh-106px)] flex flex-col bg-[url('./assets/images/hero2.webp')] bg-cover bg-center bg-no-repeat">
+                <div class="mt-auto w-2/3 md:max-w-lg ps-5 pb-5 md:ps-10 md:pb-10">
+                  <span class="block text-white">CoolApps</span>
+                  <span class="block text-white text-xl md:text-3xl">From mobile apps to gaming consoles</span>
+                  <div class="mt-5">
+                    <a class="py-2 px-3 inline-flex items-center gap-x-2 text-sm font-medium rounded-xl bg-white border border-transparent text-black hover:bg-gray-100"
+                      href="#">Read Case Studies</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- End Item -->
           </div>
-          <h2
-            class="max-w-lg mb-6 font-sans text-3xl font-bold leading-none tracking-tight text-gray-900 sm:text-4xl md:mx-auto"
-          >
-            <span class="relative inline-block">
-              <svg
-                viewBox="0 0 52 24"
-                fill="currentColor"
-                class="absolute top-0 left-0 z-0 hidden w-32 -mt-8 -ml-20 text-blue-gray-100 lg:w-32 lg:-ml-28 lg:-mt-10 sm:block"
-              >
-                <defs>
-                  <pattern
-                    id="07690130-d013-42bc-83f4-90de7ac68f76"
-                    x="0"
-                    y="0"
-                    width=".135"
-                    height=".30"
-                  >
-                    <circle cx="1" cy="1" r=".7"></circle>
-                  </pattern>
-                </defs>
-                <rect
-                  fill="url(#07690130-d013-42bc-83f4-90de7ac68f76)"
-                  width="52"
-                  height="24"
-                ></rect>
-              </svg>
-              <span class="relative">Future Ready</span>
-            </span>
+        </div>
+
+        <!-- Arrows -->
+        <button id="prevBtn" class="absolute inset-y-0 start-0 w-12 h-full text-black hover:bg-white/20 rounded-s-2xl">
+          &#9664;
+        </button>
+        <button id="nextBtn" class="absolute inset-y-0 end-0 w-12 h-full text-black hover:bg-white/20">
+          &#9654;
+        </button>
+      </div>
+    </div>
+
+    <!-- QUOTE-TEXT -->
+
+    <section>
+      <!-- <div class="height"></div> -->
+      <div class="quote-container">
+        <h4>
+          " The Future Of Business Starts Here at iBZ" "An Investment Beyond
+          Boundaries"
+        </h4>
+        <h4>-iLife Business Zone</h4>
+      </div>
+    </section>
+
+    <!-- ABOUT1 -->
+    <div class="2xl:w-[100%] h-[70vh] mx-auto px-4 sm:px-6 lg:px-24 flex justify-center items-center">
+      <!-- Grid -->
+      <div class="grid lg:grid-cols-6 lg:gap-x-8 xl:gap-x-12 lg:items-center">
+        <div class="lg:col-span-3">
+          <img class="w-full rounded-xl mb-8" src="./assets/images/hero1.webp" alt="Hero Image" />
+        </div>
+
+        <div class="lg:col-span-3">
+          <h1 class="block text-3xl font-bold text-gray-800 sm:text-4xl md:text-5xl lg:text-6xl">
+            A Landmark Of Prestige & Growth
+          </h1>
+          <p class="mt-3 text-lg text-gray-800">
+            Wagholi, situated in the eastern corridor of Pune, has transformed
+            into one of the most sought-after real estate destinations.
+            Historically known for its rich cultural heritage and temples, the
+            area is now a burgeoning residential and commercial hub. With
+            proximity to Pune city and an expanding infrastructure network,
+            Wagholi is emerging as a preferred choice for homebuyers and
+            businesses alike.
+          </p>
+
+          <div class="mt-5 lg:mt-8 flex flex-col items-center gap-2 sm:flex-row sm:gap-3">
+            <a class="w-full sm:w-auto py-3 px-4 inline-flex justify-center items-center gap-x-2 text-md font-medium rounded-full border border-transparent bg-blue-600 text-white hover:bg-blue-700 focus:outline-none focus:bg-blue-700 disabled:opacity-50 disabled:pointer-events-none"
+              href="#">
+              Schedule a visit
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ABOUT2 -->
+
+    <div class="2xl:w-[100%] h-[70vh] mx-auto px-4 sm:px-6 lg:px-24 flex justify-center items-center">
+      <!-- Grid -->
+      <div class="grid lg:grid-cols-6 lg:gap-x-8 xl:gap-x-12 lg:items-center">
+        <div class="lg:col-span-3">
+          <h1 class="block text-3xl font-bold text-gray-800 sm:text-4xl md:text-5xl lg:text-6xl">
+            Pune’s Next Big Investment Hub
+          </h1>
+          <p class="mt-3 text-lg text-gray-800">
+            This suburb is strategically located on Nagar Road, providing
+            seamless connectivity to key areas like Kharadi, Viman Nagar,
+            Hadapsar, and Pune Airport. The IT and business hubs of
+            Magarpatta, EON IT Park, and World Trade Center are just a short
+            drive away, making it an attractive destination for professionals
+            and investors. Wagholi&#39;s rapid development is complemented by
+            a host of amenities such as reputed schools, colleges, hospitals,
+            and shopping complexes, making it a self-sufficient locality.
+            Additionally, upcoming infrastructural projects, including metro
+            connectivity and road widening, are poised to enhance the
+            area&#39;s growth potential further.
+          </p>
+
+          <div class="mt-5 lg:mt-8 flex flex-col items-center gap-2 sm:flex-row sm:gap-3">
+            <a class="w-full sm:w-auto py-3 px-4 inline-flex justify-center items-center gap-x-2 text-md font-medium rounded-full border border-transparent bg-blue-600 text-white hover:bg-blue-700 focus:outline-none focus:bg-blue-700 disabled:opacity-50 disabled:pointer-events-none"
+              href="#">
+              Schedule a visit
+            </a>
+          </div>
+        </div>
+
+        <div class="lg:col-span-3 mt-10 lg:mt-0">
+          <img class="w-full rounded-xl mb-8" src="./assets/images/hero1.webp" alt="Hero Image" />
+        </div>
+      </div>
+    </div>
+
+    <!-- SERVICES -->
+
+    <section class="services">
+      <div class="services-header">
+        <span class="badge">A Business Hub with Unlimited Potential</span>
+        <!-- <span class="services-title">Why Bhavdhan is a Great Location</span> -->
+      </div>
+
+      <div class="service-item">
+        <div class="service-number">01</div>
+        <div class="service-title">Right on Nagar Road</div>
+        <div class="service-description">
+          Offering massive visibility, high foot traffic, and a prestigious
+          address for unmatched business growth.
+        </div>
+      </div>
+
+      <div class="service-item">
+        <div class="service-number">02</div>
+        <div class="service-title">Assured Rental Returns</div>
+        <div class="service-description">
+          Experiencing high demand from IT companies and businesses, making it
+          a prime commercial destination
+        </div>
+      </div>
+
+      <div class="service-item">
+        <div class="service-number">03</div>
+        <div class="service-title">Future Ready Infrastructure</div>
+        <div class="service-description">
+          Featuring smart design, high-speed elevators, and world-class
+          security for a seamless business experience
+        </div>
+      </div>
+
+      <div class="service-item">
+        <div class="service-number">04</div>
+        <div class="service-title">Flexible Spaces</div>
+        <div class="service-description">
+          Bringing together retail, corporate offices, healthcare, and
+          startups—all under one roof for a dynamic business ecosystem
+        </div>
+      </div>
+    </section>
+
+    <!-- Infrastructure -->
+    <div class="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20">
+      <div class="max-w-xl mb-10 md:mx-auto sm:text-center lg:max-w-2xl md:mb-12">
+        <div>
+          <p
+            class="inline-block px-3 py-px mb-4 text-xs font-semibold tracking-wider text-teal-900 uppercase rounded-full bg-teal-accent-400">
             Infrastructure
-          </h2>
-          <p class="text-base text-gray-700 md:text-lg">
-            Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-            accusantium doloremque rem aperiam, eaque ipsa quae.
           </p>
         </div>
-        <div
-          class="grid max-w-screen-lg mx-auto space-y-6 lg:grid-cols-2 lg:space-y-0 lg:divide-x"
-        >
-          <div class="space-y-6 sm:px-16">
-            <div class="flex flex-col max-w-md sm:flex-row">
-              <div class="mb-4 mr-4">
-                <div class="flex w-12 h-12 rounded-full bg-indigo-50">
-                  <svg
-                    class="w-8 h-8 text-deep-purple-accent-400 sm:w-10 sm:h-10"
-                    stroke="currentColor"
-                    viewBox="0 0 52 52"
-                  >
-                    <polygon
-                      stroke-width="3"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      fill="none"
-                      points="29 13 14 29 25 29 23 39 38 23 27 23"
-                    ></polygon>
-                  </svg>
-                </div>
-              </div>
-              <div>
-                <h6 class="mb-3 text-xl font-bold leading-5">Pune Ring Road</h6>
-                <p class="text-sm text-gray-900">
-                  A 128 km expressway connecting key highways, reducing
-                  congestion & boosting property values
-                </p>
-              </div>
-            </div>
-            <div class="flex flex-col max-w-md sm:flex-row">
-              <div class="mb-4 mr-4">
-                <div class="flex w-12 h-12 rounded-full bg-indigo-50">
-                  <svg
-                    class="w-8 h-8 text-deep-purple-accent-400 sm:w-10 sm:h-10"
-                    stroke="currentColor"
-                    viewBox="0 0 52 52"
-                  >
-                    <polygon
-                      stroke-width="3"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      fill="none"
-                      points="29 13 14 29 25 29 23 39 38 23 27 23"
-                    ></polygon>
-                  </svg>
-                </div>
-              </div>
-              <div>
-                <h6 class="mb-3 text-xl font-bold leading-5">
-                  Metro Phase 2 Expansion
-                </h6>
-                <p class="text-sm text-gray-900">
-                  Lookout flogging bilge rat main sheet bilge water nipper fluke
-                  to go on account heave down clap of thunder.
-                </p>
-              </div>
-            </div>
-            <div class="flex flex-col max-w-md sm:flex-row">
-              <div class="mb-4 mr-4">
-                <div class="flex w-12 h-12 rounded-full bg-indigo-50">
-                  <svg
-                    class="w-8 h-8 text-deep-purple-accent-400 sm:w-10 sm:h-10"
-                    stroke="currentColor"
-                    viewBox="0 0 52 52"
-                  >
-                    <polygon
-                      stroke-width="3"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      fill="none"
-                      points="29 13 14 29 25 29 23 39 38 23 27 23"
-                    ></polygon>
-                  </svg>
-                </div>
-              </div>
-              <div>
-                <h6 class="mb-3 text-xl font-bold leading-5">
-                  Nagar Road Expansion
-                </h6>
-                <p class="text-sm text-gray-900">
-                  The first mate and his Skipper too will do their very best to
-                  make the others comfortable.
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="space-y-6 sm:px-16">
-            <div class="flex flex-col max-w-md sm:flex-row">
-              <div class="mb-4 mr-4">
-                <div class="flex w-12 h-12 rounded-full bg-indigo-50">
-                  <svg
-                    class="w-8 h-8 text-deep-purple-accent-400 sm:w-10 sm:h-10"
-                    stroke="currentColor"
-                    viewBox="0 0 52 52"
-                  >
-                    <polygon
-                      stroke-width="3"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      fill="none"
-                      points="29 13 14 29 25 29 23 39 38 23 27 23"
-                    ></polygon>
-                  </svg>
-                </div>
-              </div>
-              <div>
-                <h6 class="mb-3 text-xl font-bold leading-5">
-                  High-Speed Rail (Mumbai-Pune-Nagpur
-                </h6>
-                <p class="text-sm text-gray-900">
-                  Skate ipsum dolor sit amet, alley oop vert mute-air Colby
-                  Carter flail 180 berm over the sea.
-                </p>
-              </div>
-            </div>
-            <div class="flex flex-col max-w-md sm:flex-row">
-              <div class="mb-4 mr-4">
-                <div class="flex w-12 h-12 rounded-full bg-indigo-50">
-                  <svg
-                    class="w-8 h-8 text-deep-purple-accent-400 sm:w-10 sm:h-10"
-                    stroke="currentColor"
-                    viewBox="0 0 52 52"
-                  >
-                    <polygon
-                      stroke-width="3"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      fill="none"
-                      points="29 13 14 29 25 29 23 39 38 23 27 23"
-                    ></polygon>
-                  </svg>
-                </div>
-              </div>
-              <div>
-                <h6 class="mb-3 text-xl font-bold leading-5">
-                  New IT Parks & SEZs
-                </h6>
-                <p class="text-sm text-gray-900">
-                  Increased corporate presence in Upper Kharadi & Wagholi,
-                  creating high rental demand.
-                </p>
-              </div>
-            </div>
-            <div class="flex flex-col max-w-md sm:flex-row">
-              <div class="mb-4 mr-4">
-                <div class="flex w-12 h-12 rounded-full bg-indigo-50">
-                  <svg
-                    class="w-8 h-8 text-deep-purple-accent-400 sm:w-10 sm:h-10"
-                    stroke="currentColor"
-                    viewBox="0 0 52 52"
-                  >
-                    <polygon
-                      stroke-width="3"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      fill="none"
-                      points="29 13 14 29 25 29 23 39 38 23 27 23"
-                    ></polygon>
-                  </svg>
-                </div>
-              </div>
-              <div>
-                <h6 class="mb-3 text-xl font-bold leading-5">
-                  Pune Airport Expansion
-                </h6>
-                <p class="text-sm text-gray-900">
-                  Doubling capacity to handle increased international & domestic
-                  business traffic.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
+        <h2
+          class="max-w-lg mb-6 font-sans text-3xl font-bold leading-none tracking-tight text-gray-900 sm:text-4xl md:mx-auto">
+          <span class="relative inline-block">
+            <svg viewBox="0 0 52 24" fill="currentColor"
+              class="absolute top-0 left-0 z-0 hidden w-32 -mt-8 -ml-20 text-blue-gray-100 lg:w-32 lg:-ml-28 lg:-mt-10 sm:block">
+              <defs>
+                <pattern id="07690130-d013-42bc-83f4-90de7ac68f76" x="0" y="0" width=".135" height=".30">
+                  <circle cx="1" cy="1" r=".7"></circle>
+                </pattern>
+              </defs>
+              <rect fill="url(#07690130-d013-42bc-83f4-90de7ac68f76)" width="52" height="24"></rect>
+            </svg>
+            <span class="relative">Future Ready</span>
+          </span>
+          Infrastructure
+        </h2>
+        <p class="text-base text-gray-700 md:text-lg">
+          Sed ut perspiciatis unde omnis iste natus error sit voluptatem
+          accusantium doloremque rem aperiam, eaque ipsa quae.
+        </p>
       </div>
-
-      <div
-        class="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20"
-      >
-        <!-- Centered Title, SVG, and Description -->
-        <div class="max-w-xl mb-10 mx-auto text-center">
-          <div>
-            <p
-              class="inline-block px-3 py-px mb-4 text-xs font-semibold tracking-wider text-teal-900 uppercase rounded-full bg-teal-accent-400"
-            >
-              Just do it
-            </p>
-          </div>
-          <h2
-            class="max-w-lg mb-6 font-sans text-3xl font-bold leading-none tracking-tight text-gray-900 sm:text-4xl mx-auto"
-          >
-            <span class="relative inline-block">
-              <svg
-                viewBox="0 0 52 24"
-                fill="currentColor"
-                class="absolute top-0 left-1/2 transform -translate-x-1/2 -mt-8 text-blue-gray-100 w-32 sm:block hidden"
-              >
-                <defs>
-                  <pattern
-                    id="a0b40128-6963-4319-aeeb-471e92fa2d74"
-                    x="0"
-                    y="0"
-                    width=".135"
-                    height=".30"
-                  >
-                    <circle cx="1" cy="1" r=".7"></circle>
-                  </pattern>
-                </defs>
-                <rect
-                  fill="url(#a0b40128-6963-4319-aeeb-471e92fa2d74)"
-                  width="52"
-                  height="24"
-                ></rect>
-              </svg>
-              <span class="relative">You</span>
-            </span>
-            miss 100% of the shots you don't take
-          </h2>
-          <p class="text-base text-gray-700 md:text-lg">
-            Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-            accusantium doloremque rem aperiam, eaque ipsa quae.
-          </p>
-        </div>
-
-        <!-- Two-column layout -->
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
-          <div class="space-y-3">
-            <div
-              class="flex items-center p-2 duration-300 transform border rounded shadow hover:scale-105 sm:hover:scale-110"
-            >
-              <span class="text-gray-800"
-                >Building on the Main National Highway
-              </span>
-            </div>
-            <div
-              class="flex items-center p-2 duration-300 transform border rounded shadow hover:scale-105 sm:hover:scale-110"
-            >
-              <span class="text-gray-800">Showrooms on Ground Floor </span>
-            </div>
-            <div
-              class="flex items-center p-2 duration-300 transform border rounded shadow hover:scale-105 sm:hover:scale-110"
-            >
-              <span class="text-gray-800">3 High-Speed Elevators </span>
-            </div>
-            <div
-              class="flex items-center p-2 duration-300 transform border rounded shadow hover:scale-105 sm:hover:scale-110"
-            >
-              <span class="text-gray-800">Glass Facade for all Buildings </span>
-            </div>
-            <div
-              class="flex items-center p-2 duration-300 transform border rounded shadow hover:scale-105 sm:hover:scale-110"
-            >
-              <span class="text-gray-800">Ample Parking Spaces </span>
-            </div>
-          </div>
-
-          <div class="space-y-3">
-            <div
-              class="flex items-center p-2 duration-300 transform border rounded shadow hover:scale-105 sm:hover:scale-110"
-            >
-              <span class="text-gray-800">24x7 Security </span>
-            </div>
-            <div
-              class="flex items-center p-2 duration-300 transform border rounded shadow hover:scale-105 sm:hover:scale-110"
-            >
-              <span class="text-gray-800"> Fire Alarm System & Sprinklers</span>
-            </div>
-            <div
-              class="flex items-center p-2 duration-300 transform border rounded shadow hover:scale-105 sm:hover:scale-110"
-            >
-              <span class="text-gray-800">
-                Generator Back up for Common Areas</span
-              >
-            </div>
-
-            <div
-              class="flex items-center p-2 duration-300 transform border rounded shadow hover:scale-105 sm:hover:scale-110"
-            >
-              <span class="text-gray-800"
-                >Floor-to-Floor Height is 3.3 Meter for all Offices
-              </span>
-            </div>
-            <div
-              class="flex items-center p-2 duration-300 transform border rounded shadow hover:scale-105 sm:hover:scale-110"
-            >
-              <span class="text-gray-800"> Grand Entrance Lobby</span>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Content1 -->
-      <div class="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20">
-        <div class="max-w-xl mb-10 md:mx-auto sm:text-center lg:max-w-2xl md:mb-12">
-          <div>
-            <p class="inline-block px-3 py-px mb-4 text-xs font-semibold tracking-wider text-teal-900 uppercase rounded-full bg-teal-accent-400">
-              Brand new
-            </p>
-          </div>
-          <h2 class="max-w-lg mb-6 font-sans text-3xl font-bold leading-none tracking-tight text-gray-900 sm:text-4xl md:mx-auto">
-            <span class="relative inline-block">
-              <svg viewBox="0 0 52 24" fill="currentColor"
-                class="absolute top-0 left-0 z-0 hidden w-32 -mt-8 -ml-20 text-blue-gray-100 lg:w-32 lg:-ml-28 lg:-mt-10 sm:block">
-                <defs>
-                  <pattern id="3071a3ad-db4a-4cbe-ac9a-47850b69e4b7" x="0" y="0" width=".135" height=".30">
-                    <circle cx="1" cy="1" r=".7"></circle>
-                  </pattern>
-                </defs>
-                <rect fill="url(#3071a3ad-db4a-4cbe-ac9a-47850b69e4b7)" width="52" height="24"></rect>
-              </svg>
-              <span class="relative">The</span>
-            </span>
-            quick, brown fox jumps over a lazy dog
-          </h2>
-          <p class="text-base text-gray-700 md:text-lg">
-            Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque rem aperiam, eaque ipsa quae.
-          </p>
-        </div>
-      
-        <!-- Grid Layout with 50% Column Widths -->
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 sm:mx-auto">
-          <!-- Left Column - Text -->
-          <div class="flex flex-col justify-center">
-            <div class="flex">
-              <div class="mr-4">
-                <div class="flex items-center justify-center w-10 h-10 mb-3 rounded-full bg-indigo-50">
-                  <svg class="w-8 h-8 text-deep-purple-accent-400" stroke="currentColor" viewBox="0 0 52 52">
-                    <polygon stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="none"
-                      points="29 13 14 29 25 29 23 39 38 23 27 23"></polygon>
-                  </svg>
-                </div>
-              </div>
-              <div>
-                <h6 class="mb-2 font-semibold leading-5">They urge you to put down</h6>
-                <p class="text-sm text-gray-900">
-                  Skate ipsum dolor sit amet, alley oop vert mute-air Colby Carter flail 180 berm.
-                </p>
-                <hr class="w-full my-6 border-gray-300" />
+      <div class="grid max-w-screen-lg mx-auto space-y-6 lg:grid-cols-2 lg:space-y-0 lg:divide-x">
+        <div class="space-y-6 sm:px-16">
+          <div class="flex flex-col max-w-md sm:flex-row">
+            <div class="mb-4 mr-4">
+              <div class="flex w-12 h-12 rounded-full bg-indigo-50">
+                <svg class="w-8 h-8 text-deep-purple-accent-400 sm:w-10 sm:h-10" stroke="currentColor"
+                  viewBox="0 0 52 52">
+                  <polygon stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="none"
+                    points="29 13 14 29 25 29 23 39 38 23 27 23"></polygon>
+                </svg>
               </div>
             </div>
-      
-            <div class="flex">
-              <div class="mr-4">
-                <div class="flex items-center justify-center w-10 h-10 mb-3 rounded-full bg-indigo-50">
-                  <svg class="w-8 h-8 text-deep-purple-accent-400" stroke="currentColor" viewBox="0 0 52 52">
-                    <polygon stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="none"
-                      points="29 13 14 29 25 29 23 39 38 23 27 23"></polygon>
-                  </svg>
-                </div>
-              </div>
-              <div>
-                <h6 class="mb-2 font-semibold leading-5">The powerless in a world</h6>
-                <p class="text-sm text-gray-900">
-                  The first mate and his Skipper too will do their very best to make the others comfortable.
-                </p>
-                <hr class="w-full my-6 border-gray-300" />
-              </div>
-            </div>
-      
-            <div class="flex">
-              <div class="mr-4">
-                <div class="flex items-center justify-center w-10 h-10 mb-3 rounded-full bg-indigo-50">
-                  <svg class="w-8 h-8 text-deep-purple-accent-400" stroke="currentColor" viewBox="0 0 52 52">
-                    <polygon stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="none"
-                      points="29 13 14 29 25 29 23 39 38 23 27 23"></polygon>
-                  </svg>
-                </div>
-              </div>
-              <div>
-                <h6 class="mb-2 font-semibold leading-5">Tell them I hate them</h6>
-                <p class="text-sm text-gray-900">
-                  Chase ball of string eat plants, meow, and throw up because I ate plants.
-                </p>
-              </div>
-            </div>
-          </div>
-      
-          <!-- Right Column - Single Image -->
-          <div>
-            <img class="object-cover w-full h-full rounded shadow-lg"
-              src="https://images.pexels.com/photos/3184360/pexels-photo-3184360.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
-              alt="Investment Growth" />
-          </div>
-        </div>
-      </div>
-      
-      <!-- End -->
-
-      <div class="px-6 py-16 mx-auto max-w-screen-xl md:px-16 lg:py-20">
-        <div class="text-center mb-12">
-          <h2 class="text-4xl font-bold text-gray-900 leading-tight">
-            Multiply Your Wealth with Smart Investments
-          </h2>
-          <p class="text-gray-600 mt-4 text-lg max-w-2xl mx-auto">
-            Strong returns, consistent demand, and premium locations—your investment 
-            is set to grow exponentially.
-          </p>
-        </div>
-      
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-          <!-- Left Column - Auto Scrollable Images -->
-          <div class="relative overflow-hidden rounded-xl shadow-lg">
-            <div class="w-full h-auto flex space-x-4 animate-scroll">
-              <img 
-                src="./assets/images/hero1.webp" 
-                alt="Investment Growth"
-                class="w-full h-auto rounded-xl flex-shrink-0"
-              />
-              <img 
-                src="./assets/images/hero2.webp" 
-                alt="Investment Opportunity"
-                class="w-full h-auto rounded-xl flex-shrink-0"
-              />
-            </div>
-            <div class="absolute top-4 left-4 bg-white px-4 py-2 rounded-lg shadow-md">
-              <p class="text-gray-900 font-semibold">Up to 18% ROI</p>
-            </div>
-          </div>
-      
-          <!-- Right Column - Steps -->
-          <div class="space-y-8">
-            <!-- Step 1 -->
-            <div class="flex items-start">
-              <div class="flex items-center justify-center w-12 h-12 text-white bg-blue-600 rounded-full shadow-md">
-                <span class="text-lg font-bold">1</span>
-              </div>
-              <div class="ml-6">
-                <h3 class="text-2xl font-semibold text-gray-900">18% ROI on Rental</h3>
-                <p class="text-gray-600 mt-2">
-                  Your investment starts paying back from day one with high returns.
-                </p>
-              </div>
-            </div>
-      
-            <!-- Step 2 -->
-            <div class="flex items-start">
-              <div class="flex items-center justify-center w-12 h-12 text-white bg-blue-600 rounded-full shadow-md">
-                <span class="text-lg font-bold">2</span>
-              </div>
-              <div class="ml-6">
-                <h3 class="text-2xl font-semibold text-gray-900">High Leasing Demand</h3>
-                <p class="text-gray-600 mt-2">
-                  Corporates, professionals, and top retail brands are lining up.
-                </p>
-              </div>
-            </div>
-      
-            <!-- Step 3 -->
-            <div class="flex items-start">
-              <div class="flex items-center justify-center w-12 h-12 text-white bg-blue-600 rounded-full shadow-md">
-                <span class="text-lg font-bold">3</span>
-              </div>
-              <div class="ml-6">
-                <h3 class="text-2xl font-semibold text-gray-900">
-                  Premium Location = Premium Rentals
-                </h3>
-                <p class="text-gray-600 mt-2">
-                  Positioned for steady income with long-term appreciation.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      
-      <style>
-        @keyframes scroll {
-          0% { transform: translateX(0); }
-          50% { transform: translateX(-100%); }
-          100% { transform: translateX(0); }
-        }
-      
-        .animate-scroll {
-          display: flex;
-          width: 100%;
-          animation: scroll 20s linear infinite;
-        }
-      </style>
-      
-      
-      
-
-      <!-- End -->
-      <div
-        class="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20"
-      >
-        <div class="grid gap-5 row-gap-10 lg:grid-cols-2">
-          <div class="flex flex-col justify-center">
-            <div class="max-w-xl mb-6">
-              <h2
-                class="max-w-lg mb-6 font-sans text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl sm:leading-none"
-              >
-                The quick, brown fox<br class="hidden md:block" />
-                jumps over
-                <span class="relative px-1">
-                  <div
-                    class="absolute inset-x-0 bottom-0 h-3 transform -skew-x-12 bg-teal-accent-400"
-                  ></div>
-                  <span
-                    class="relative inline-block text-deep-purple-accent-400"
-                    >a lazy dog</span
-                  >
-                </span>
-              </h2>
-              <p class="text-base text-gray-700 md:text-lg">
-                Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-                accusantium doloremque laudantium, totam rem aperiam, eaque ipsa
-                quae. explicabo.
+            <div>
+              <h6 class="mb-3 text-xl font-bold leading-5">Pune Ring Road</h6>
+              <p class="text-sm text-gray-900">
+                A 128 km expressway connecting key highways, reducing
+                congestion & boosting property values
               </p>
             </div>
-            <p class="mb-4 text-sm font-bold tracking-widest uppercase">
-              Features
-            </p>
-            <div class="grid space-y-3 sm:gap-2 sm:grid-cols-2 sm:space-y-0">
-              <ul class="space-y-3">
-                <li class="flex">
-                  <span class="mr-1">
-                    <svg
-                      class="w-5 h-5 mt-px text-deep-purple-accent-400"
-                      stroke="currentColor"
-                      viewBox="0 0 52 52"
-                    >
-                      <polygon
-                        stroke-width="4"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        fill="none"
-                        points="29 13 14 29 25 29 23 39 38 23 27 23"
-                      ></polygon>
-                    </svg>
-                  </span>
-                  A slice of heaven
-                </li>
-                <li class="flex">
-                  <span class="mr-1">
-                    <svg
-                      class="w-5 h-5 mt-px text-deep-purple-accent-400"
-                      stroke="currentColor"
-                      viewBox="0 0 52 52"
-                    >
-                      <polygon
-                        stroke-width="4"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        fill="none"
-                        points="29 13 14 29 25 29 23 39 38 23 27 23"
-                      ></polygon>
-                    </svg>
-                  </span>
-                  Disrupt inspire
-                </li>
-                <li class="flex">
-                  <span class="mr-1">
-                    <svg
-                      class="w-5 h-5 mt-px text-deep-purple-accent-400"
-                      stroke="currentColor"
-                      viewBox="0 0 52 52"
-                    >
-                      <polygon
-                        stroke-width="4"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        fill="none"
-                        points="29 13 14 29 25 29 23 39 38 23 27 23"
-                      ></polygon>
-                    </svg>
-                  </span>
-                  Preliminary thinking
-                </li>
-              </ul>
-              <ul class="space-y-3">
-                <li class="flex">
-                  <span class="mr-1">
-                    <svg
-                      class="w-5 h-5 mt-px text-deep-purple-accent-400"
-                      stroke="currentColor"
-                      viewBox="0 0 52 52"
-                    >
-                      <polygon
-                        stroke-width="4"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        fill="none"
-                        points="29 13 14 29 25 29 23 39 38 23 27 23"
-                      ></polygon>
-                    </svg>
-                  </span>
-                  Flipboard curmudgeon
-                </li>
-                <li class="flex">
-                  <span class="mr-1">
-                    <svg
-                      class="w-5 h-5 mt-px text-deep-purple-accent-400"
-                      stroke="currentColor"
-                      viewBox="0 0 52 52"
-                    >
-                      <polygon
-                        stroke-width="4"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        fill="none"
-                        points="29 13 14 29 25 29 23 39 38 23 27 23"
-                      ></polygon>
-                    </svg>
-                  </span>
-                  Storage shed
-                </li>
-                <li class="flex">
-                  <span class="mr-1">
-                    <svg
-                      class="w-5 h-5 mt-px text-deep-purple-accent-400"
-                      stroke="currentColor"
-                      viewBox="0 0 52 52"
-                    >
-                      <polygon
-                        stroke-width="4"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        fill="none"
-                        points="29 13 14 29 25 29 23 39 38 23 27 23"
-                      ></polygon>
-                    </svg>
-                  </span>
-                  Satoshi Nakamoto
-                </li>
-              </ul>
+          </div>
+          <div class="flex flex-col max-w-md sm:flex-row">
+            <div class="mb-4 mr-4">
+              <div class="flex w-12 h-12 rounded-full bg-indigo-50">
+                <svg class="w-8 h-8 text-deep-purple-accent-400 sm:w-10 sm:h-10" stroke="currentColor"
+                  viewBox="0 0 52 52">
+                  <polygon stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="none"
+                    points="29 13 14 29 25 29 23 39 38 23 27 23"></polygon>
+                </svg>
+              </div>
+            </div>
+            <div>
+              <h6 class="mb-3 text-xl font-bold leading-5">
+                Metro Phase 2 Expansion
+              </h6>
+              <p class="text-sm text-gray-900">
+                Lookout flogging bilge rat main sheet bilge water nipper fluke
+                to go on account heave down clap of thunder.
+              </p>
             </div>
           </div>
-          <div>
-            <img
-              class="object-cover w-full h-56 rounded shadow-lg sm:h-96"
-              src="https://images.pexels.com/photos/927022/pexels-photo-927022.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=3&amp;h=750&amp;w=1260"
-              alt=""
-            />
+          <div class="flex flex-col max-w-md sm:flex-row">
+            <div class="mb-4 mr-4">
+              <div class="flex w-12 h-12 rounded-full bg-indigo-50">
+                <svg class="w-8 h-8 text-deep-purple-accent-400 sm:w-10 sm:h-10" stroke="currentColor"
+                  viewBox="0 0 52 52">
+                  <polygon stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="none"
+                    points="29 13 14 29 25 29 23 39 38 23 27 23"></polygon>
+                </svg>
+              </div>
+            </div>
+            <div>
+              <h6 class="mb-3 text-xl font-bold leading-5">
+                Nagar Road Expansion
+              </h6>
+              <p class="text-sm text-gray-900">
+                The first mate and his Skipper too will do their very best to
+                make the others comfortable.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="space-y-6 sm:px-16">
+          <div class="flex flex-col max-w-md sm:flex-row">
+            <div class="mb-4 mr-4">
+              <div class="flex w-12 h-12 rounded-full bg-indigo-50">
+                <svg class="w-8 h-8 text-deep-purple-accent-400 sm:w-10 sm:h-10" stroke="currentColor"
+                  viewBox="0 0 52 52">
+                  <polygon stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="none"
+                    points="29 13 14 29 25 29 23 39 38 23 27 23"></polygon>
+                </svg>
+              </div>
+            </div>
+            <div>
+              <h6 class="mb-3 text-xl font-bold leading-5">
+                High-Speed Rail (Mumbai-Pune-Nagpur
+              </h6>
+              <p class="text-sm text-gray-900">
+                Skate ipsum dolor sit amet, alley oop vert mute-air Colby
+                Carter flail 180 berm over the sea.
+              </p>
+            </div>
+          </div>
+          <div class="flex flex-col max-w-md sm:flex-row">
+            <div class="mb-4 mr-4">
+              <div class="flex w-12 h-12 rounded-full bg-indigo-50">
+                <svg class="w-8 h-8 text-deep-purple-accent-400 sm:w-10 sm:h-10" stroke="currentColor"
+                  viewBox="0 0 52 52">
+                  <polygon stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="none"
+                    points="29 13 14 29 25 29 23 39 38 23 27 23"></polygon>
+                </svg>
+              </div>
+            </div>
+            <div>
+              <h6 class="mb-3 text-xl font-bold leading-5">
+                New IT Parks & SEZs
+              </h6>
+              <p class="text-sm text-gray-900">
+                Increased corporate presence in Upper Kharadi & Wagholi,
+                creating high rental demand.
+              </p>
+            </div>
+          </div>
+          <div class="flex flex-col max-w-md sm:flex-row">
+            <div class="mb-4 mr-4">
+              <div class="flex w-12 h-12 rounded-full bg-indigo-50">
+                <svg class="w-8 h-8 text-deep-purple-accent-400 sm:w-10 sm:h-10" stroke="currentColor"
+                  viewBox="0 0 52 52">
+                  <polygon stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="none"
+                    points="29 13 14 29 25 29 23 39 38 23 27 23"></polygon>
+                </svg>
+              </div>
+            </div>
+            <div>
+              <h6 class="mb-3 text-xl font-bold leading-5">
+                Pune Airport Expansion
+              </h6>
+              <p class="text-sm text-gray-900">
+                Doubling capacity to handle increased international & domestic
+                business traffic.
+              </p>
+            </div>
           </div>
         </div>
       </div>
+    </div>
 
-      <!-- End -->
-      
-      <div class="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20">
-        <div class="grid gap-10 row-gap-8 lg:grid-cols-3">
-          <div>
-            <div class="flex">
-              <h6 class="mr-2 text-4xl font-bold md:text-5xl text-deep-purple-accent-400">
-                86K
-              </h6>
-              <div class="flex items-center justify-center rounded-full bg-teal-accent-400 w-7 h-7">
-                <svg class="text-teal-900 w-7 h-7" stroke="currentColor" viewBox="0 0 52 52">
-                  <polygon stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="none" points="29 13 14 29 25 29 23 39 38 23 27 23"></polygon>
-                </svg>
-              </div>
-            </div>
-            <p class="mb-2 font-bold md:text-lg">Downloads</p>
-            <p class="text-gray-700">
-              Three movie stars, Chloe, Lexa, and Jon, are filming a movie in the Amazon. They’re very famous and very high-maintenance effort.
-            </p>
+    <div class="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20">
+      <!-- Centered Title, SVG, and Description -->
+      <div class="max-w-xl mb-10 mx-auto text-center">
+        <div>
+          <p
+            class="inline-block px-3 py-px mb-4 text-xs font-semibold tracking-wider text-teal-900 uppercase rounded-full bg-teal-accent-400">
+            Just do it
+          </p>
+        </div>
+        <h2
+          class="max-w-lg mb-6 font-sans text-3xl font-bold leading-none tracking-tight text-gray-900 sm:text-4xl mx-auto">
+          <span class="relative inline-block">
+            <svg viewBox="0 0 52 24" fill="currentColor"
+              class="absolute top-0 left-1/2 transform -translate-x-1/2 -mt-8 text-blue-gray-100 w-32 sm:block hidden">
+              <defs>
+                <pattern id="a0b40128-6963-4319-aeeb-471e92fa2d74" x="0" y="0" width=".135" height=".30">
+                  <circle cx="1" cy="1" r=".7"></circle>
+                </pattern>
+              </defs>
+              <rect fill="url(#a0b40128-6963-4319-aeeb-471e92fa2d74)" width="52" height="24"></rect>
+            </svg>
+            <span class="relative">You</span>
+          </span>
+          miss 100% of the shots you don't take
+        </h2>
+        <p class="text-base text-gray-700 md:text-lg">
+          Sed ut perspiciatis unde omnis iste natus error sit voluptatem
+          accusantium doloremque rem aperiam, eaque ipsa quae.
+        </p>
+      </div>
+
+      <!-- Two-column layout -->
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
+        <div class="space-y-3">
+          <div
+            class="flex items-center p-2 duration-300 transform border rounded shadow hover:scale-105 sm:hover:scale-110">
+            <span class="text-gray-800">Building on the Main National Highway
+            </span>
           </div>
-          <div>
-            <div class="flex">
-              <h6 class="mr-2 text-4xl font-bold md:text-5xl text-deep-purple-accent-400">
-                1.3K
-              </h6>
-              <div class="flex items-center justify-center rounded-full bg-teal-accent-400 w-7 h-7">
-                <svg class="text-teal-900 w-7 h-7" stroke="currentColor" viewBox="0 0 52 52">
-                  <polygon stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="none" points="29 13 14 29 25 29 23 39 38 23 27 23"></polygon>
-                </svg>
-              </div>
-            </div>
-            <p class="mb-2 font-bold md:text-lg">Subscribers</p>
-            <p class="text-gray-700">
-              One day, after filming a scene deep in the rainforest, the three actors and their agents decide to head back to home base by foot.
-            </p>
+          <div
+            class="flex items-center p-2 duration-300 transform border rounded shadow hover:scale-105 sm:hover:scale-110">
+            <span class="text-gray-800">Showrooms on Ground Floor </span>
           </div>
-          <div>
-            <div class="flex">
-              <h6 class="mr-2 text-4xl font-bold md:text-5xl text-deep-purple-accent-400">
-                52M
-              </h6>
-              <div class="flex items-center justify-center rounded-full bg-teal-accent-400 w-7 h-7">
-                <svg class="text-teal-900 w-7 h-7" stroke="currentColor" viewBox="0 0 52 52">
-                  <polygon stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="none" points="29 13 14 29 25 29 23 39 38 23 27 23"></polygon>
-                </svg>
-              </div>
-            </div>
-            <p class="mb-2 font-bold md:text-lg">Cookies</p>
-            <p class="text-gray-700">
-              Suddenly, they come to a large river. On the riverbank, they find a small rowboat, but it’s only big enough to hold two of them at one time.
-            </p>
+          <div
+            class="flex items-center p-2 duration-300 transform border rounded shadow hover:scale-105 sm:hover:scale-110">
+            <span class="text-gray-800">3 High-Speed Elevators </span>
+          </div>
+          <div
+            class="flex items-center p-2 duration-300 transform border rounded shadow hover:scale-105 sm:hover:scale-110">
+            <span class="text-gray-800">Glass Facade for all Buildings </span>
+          </div>
+          <div
+            class="flex items-center p-2 duration-300 transform border rounded shadow hover:scale-105 sm:hover:scale-110">
+            <span class="text-gray-800">Ample Parking Spaces </span>
+          </div>
+        </div>
+
+        <div class="space-y-3">
+          <div
+            class="flex items-center p-2 duration-300 transform border rounded shadow hover:scale-105 sm:hover:scale-110">
+            <span class="text-gray-800">24x7 Security </span>
+          </div>
+          <div
+            class="flex items-center p-2 duration-300 transform border rounded shadow hover:scale-105 sm:hover:scale-110">
+            <span class="text-gray-800"> Fire Alarm System & Sprinklers</span>
+          </div>
+          <div
+            class="flex items-center p-2 duration-300 transform border rounded shadow hover:scale-105 sm:hover:scale-110">
+            <span class="text-gray-800">
+              Generator Back up for Common Areas</span>
+          </div>
+
+          <div
+            class="flex items-center p-2 duration-300 transform border rounded shadow hover:scale-105 sm:hover:scale-110">
+            <span class="text-gray-800">Floor-to-Floor Height is 3.3 Meter for all Offices
+            </span>
+          </div>
+          <div
+            class="flex items-center p-2 duration-300 transform border rounded shadow hover:scale-105 sm:hover:scale-110">
+            <span class="text-gray-800"> Grand Entrance Lobby</span>
           </div>
         </div>
       </div>
-      <!-- End -->
+    </div>
 
-      <!-- End -->
+    <!-- Content1 -->
+    <div class="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20">
+      <div class="max-w-xl mb-10 md:mx-auto sm:text-center lg:max-w-2xl md:mb-12">
+        <div>
+          <p
+            class="inline-block px-3 py-px mb-4 text-xs font-semibold tracking-wider text-teal-900 uppercase rounded-full bg-teal-accent-400">
+            Brand new
+          </p>
+        </div>
+        <h2
+          class="max-w-lg mb-6 font-sans text-3xl font-bold leading-none tracking-tight text-gray-900 sm:text-4xl md:mx-auto">
+          <span class="relative inline-block">
+            <svg viewBox="0 0 52 24" fill="currentColor"
+              class="absolute top-0 left-0 z-0 hidden w-32 -mt-8 -ml-20 text-blue-gray-100 lg:w-32 lg:-ml-28 lg:-mt-10 sm:block">
+              <defs>
+                <pattern id="3071a3ad-db4a-4cbe-ac9a-47850b69e4b7" x="0" y="0" width=".135" height=".30">
+                  <circle cx="1" cy="1" r=".7"></circle>
+                </pattern>
+              </defs>
+              <rect fill="url(#3071a3ad-db4a-4cbe-ac9a-47850b69e4b7)" width="52" height="24"></rect>
+            </svg>
+            <span class="relative">The</span>
+          </span>
+          quick, brown fox jumps over a lazy dog
+        </h2>
+        <p class="text-base text-gray-700 md:text-lg">
+          Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque rem aperiam, eaque ipsa
+          quae.
+        </p>
+      </div>
 
-      <div
-        class="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20"
-      >
-        <div class="flex flex-col mb-6 lg:flex-row md:mb-10">
-          <div class="lg:w-1/2">
+      <!-- Grid Layout with 50% Column Widths -->
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8 sm:mx-auto">
+        <!-- Left Column - Text -->
+        <div class="flex flex-col justify-center">
+          <div class="flex">
+            <div class="mr-4">
+              <div class="flex items-center justify-center w-10 h-10 mb-3 rounded-full bg-indigo-50">
+                <svg class="w-8 h-8 text-deep-purple-accent-400" stroke="currentColor" viewBox="0 0 52 52">
+                  <polygon stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="none"
+                    points="29 13 14 29 25 29 23 39 38 23 27 23"></polygon>
+                </svg>
+              </div>
+            </div>
+            <div>
+              <h6 class="mb-2 font-semibold leading-5">Real Estate Boom: Steady Growth and Future Gains Ahead</h6>
+              <p class="text-sm text-gray-900">
+                "Property prices up by 35% in 5 years; expected appreciation 8-10% YOY"
+              </p>
+              <hr class="w-full my-6 border-gray-300" />
+            </div>
+          </div>
+
+          <div class="flex">
+            <div class="mr-4">
+              <div class="flex items-center justify-center w-10 h-10 mb-3 rounded-full bg-indigo-50">
+                <svg class="w-8 h-8 text-deep-purple-accent-400" stroke="currentColor" viewBox="0 0 52 52">
+                  <polygon stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="none"
+                    points="29 13 14 29 25 29 23 39 38 23 27 23"></polygon>
+                </svg>
+              </div>
+            </div>
+            <div>
+              <h6 class="mb-2 font-semibold leading-5">Rising Demand in Upper Kharadi as Kharadi Nears Full Occupancy
+              </h6>
+              <p class="text-sm text-gray-900">
+                "90% occupancy in Kharadi is shifting demand to Upper Kharad"
+              </p>
+              <hr class="w-full my-6 border-gray-300" />
+            </div>
+          </div>
+
+          <div class="flex">
+            <div class="mr-4">
+              <div class="flex items-center justify-center w-10 h-10 mb-3 rounded-full bg-indigo-50">
+                <svg class="w-8 h-8 text-deep-purple-accent-400" stroke="currentColor" viewBox="0 0 52 52">
+                  <polygon stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="none"
+                    points="29 13 14 29 25 29 23 39 38 23 27 23"></polygon>
+                </svg>
+              </div>
+            </div>
+            <div>
+              <h6 class="mb-2 font-semibold leading-5">"Growing IT Workforce Driving Demand for Office & Retail Spaces"
+              </h6>
+              <p class="text-sm text-gray-900">
+                30,000+ IT professionals in the vicinity, boosting office & retail needs
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Column - Single Image -->
+        <div>
+          <img class="object-cover w-full h-full rounded shadow-lg"
+            src="https://images.pexels.com/photos/3184360/pexels-photo-3184360.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
+            alt="Investment Growth" />
+        </div>
+      </div>
+    </div>
+
+    <!-- content2  -->
+    <div class="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20">
+      <!-- Grid Layout with 50% Column Widths -->
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8 sm:mx-auto">
+
+        <div>
+          <img class="object-cover w-full h-full rounded shadow-lg"
+            src="https://images.pexels.com/photos/3184360/pexels-photo-3184360.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
+            alt="Investment Growth" />
+        </div>
+
+        <div class="flex flex-col justify-center">
+          <div class="flex">
+            <div class="mr-4">
+              <div class="flex items-center justify-center w-10 h-10 mb-3 rounded-full bg-indigo-50">
+                <svg class="w-8 h-8 text-deep-purple-accent-400" stroke="currentColor" viewBox="0 0 52 52">
+                  <polygon stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="none"
+                    points="29 13 14 29 25 29 23 39 38 23 27 23"></polygon>
+                </svg>
+              </div>
+            </div>
+            <div>
+              <h6 class="mb-2 font-semibold leading-5">Unmatched connectivity</h6>
+              <p class="text-sm text-gray-900">
+                20 min from Pune Airport; well-linked to EON IT Park, Magarpatta, and Kalyani Nagar
+              </p>
+              <hr class="w-full my-6 border-gray-300" />
+            </div>
+          </div>
+
+          <div class="flex">
+            <div class="mr-4">
+              <div class="flex items-center justify-center w-10 h-10 mb-3 rounded-full bg-indigo-50">
+                <svg class="w-8 h-8 text-deep-purple-accent-400" stroke="currentColor" viewBox="0 0 52 52">
+                  <polygon stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="none"
+                    points="29 13 14 29 25 29 23 39 38 23 27 23"></polygon>
+                </svg>
+              </div>
+            </div>
+            <div>
+              <h6 class="mb-2 font-semibold leading-5"> Infrastructure Boom
+              </h6>
+              <p class="text-sm text-gray-900">
+                "Metro Phase 2, Nagar Road Expansion to further increase value"
+              </p>
+              <hr class="w-full my-6 border-gray-300" />
+            </div>
+          </div>
+
+          <div class="flex">
+            <div class="mr-4">
+              <div class="flex items-center justify-center w-10 h-10 mb-3 rounded-full bg-indigo-50">
+                <svg class="w-8 h-8 text-deep-purple-accent-400" stroke="currentColor" viewBox="0 0 52 52">
+                  <polygon stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="none"
+                    points="29 13 14 29 25 29 23 39 38 23 27 23"></polygon>
+                </svg>
+              </div>
+            </div>
+            <div>
+              <h6 class="mb-2 font-semibold leading-5">"High Rental Yeilds"
+              </h6>
+              <p class="text-sm text-gray-900">
+                Commercial properties in the area offer 6-8% rental returns with rising demand
+              </p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- End -->
+
+    <div class="px-6 py-16 mx-auto max-w-screen-xl md:px-16 lg:py-20">
+      <div class="text-center mb-12">
+        <h2 class="text-4xl font-bold text-gray-900 leading-tight">
+          Multiply Your Wealth with Smart Investments
+        </h2>
+        <p class="text-gray-600 mt-4 text-lg max-w-2xl mx-auto">
+          Strong returns, consistent demand, and premium locations—your investment
+          is set to grow exponentially.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+        <!-- Left Column - Auto Scrollable Images -->
+        <div class="relative overflow-hidden rounded-xl shadow-lg">
+          <div class="w-full h-auto flex space-x-4 animate-scroll">
+            <img src="./assets/images/hero1.webp" alt="Investment Growth"
+              class="w-full h-auto rounded-xl flex-shrink-0" />
+            <img src="./assets/images/hero2.webp" alt="Investment Opportunity"
+              class="w-full h-auto rounded-xl flex-shrink-0" />
+          </div>
+          <div class="absolute top-4 left-4 bg-white px-4 py-2 rounded-lg shadow-md">
+            <p class="text-gray-900 font-semibold">Up to 18% ROI</p>
+          </div>
+        </div>
+
+        <!-- Right Column - Steps -->
+        <div class="space-y-8">
+          <!-- Step 1 -->
+          <div class="flex items-start">
+            <div class="flex items-center justify-center w-12 h-12 text-white bg-blue-600 rounded-full shadow-md">
+              <span class="text-lg font-bold">1</span>
+            </div>
+            <div class="ml-6">
+              <h3 class="text-2xl font-semibold text-gray-900">18% ROI on Rental</h3>
+              <p class="text-gray-600 mt-2">
+                Your investment starts paying back from day one with high returns.
+              </p>
+            </div>
+          </div>
+
+          <!-- Step 2 -->
+          <div class="flex items-start">
+            <div class="flex items-center justify-center w-12 h-12 text-white bg-blue-600 rounded-full shadow-md">
+              <span class="text-lg font-bold">2</span>
+            </div>
+            <div class="ml-6">
+              <h3 class="text-2xl font-semibold text-gray-900">High Leasing Demand</h3>
+              <p class="text-gray-600 mt-2">
+                Corporates, professionals, and top retail brands are lining up.
+              </p>
+            </div>
+          </div>
+
+          <!-- Step 3 -->
+          <div class="flex items-start">
+            <div class="flex items-center justify-center w-12 h-12 text-white bg-blue-600 rounded-full shadow-md">
+              <span class="text-lg font-bold">3</span>
+            </div>
+            <div class="ml-6">
+              <h3 class="text-2xl font-semibold text-gray-900">
+                Premium Location = Premium Rentals
+              </h3>
+              <p class="text-gray-600 mt-2">
+                Positioned for steady income with long-term appreciation.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <style>
+      @keyframes scroll {
+        0% {
+          transform: translateX(0);
+        }
+
+        50% {
+          transform: translateX(-100%);
+        }
+
+        100% {
+          transform: translateX(0);
+        }
+      }
+
+      .animate-scroll {
+        display: flex;
+        width: 100%;
+        animation: scroll 20s linear infinite;
+      }
+    </style>
+
+
+
+
+    <!-- End -->
+    <div class="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20">
+      <div class="grid gap-5 row-gap-10 lg:grid-cols-2">
+        <div class="flex flex-col justify-center">
+          <div class="max-w-xl mb-6">
             <h2
-              class="max-w-md mb-6 font-sans text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl sm:leading-none xl:max-w-lg"
-            >
-              To conquer the space you must trust.
+              class="max-w-lg mb-6 font-sans text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl sm:leading-none">
+              The quick, brown fox<br class="hidden md:block" />
+              jumps over
+              <span class="relative px-1">
+                <div class="absolute inset-x-0 bottom-0 h-3 transform -skew-x-12 bg-teal-accent-400"></div>
+                <span class="relative inline-block text-deep-purple-accent-400">a lazy dog</span>
+              </span>
             </h2>
-          </div>
-          <div class="lg:w-1/2">
             <p class="text-base text-gray-700 md:text-lg">
-              For those who have seen the Earth from space, and for the hundreds
-              and perhaps thousands more who will, the experience most certainly
-              changes your perspective.
+              Sed ut perspiciatis unde omnis iste natus error sit voluptatem
+              accusantium doloremque laudantium, totam rem aperiam, eaque ipsa
+              quae. explicabo.
             </p>
+          </div>
+          <p class="mb-4 text-sm font-bold tracking-widest uppercase">
+            Features
+          </p>
+          <div class="grid space-y-3 sm:gap-2 sm:grid-cols-2 sm:space-y-0">
+            <ul class="space-y-3">
+              <li class="flex">
+                <span class="mr-1">
+                  <svg class="w-5 h-5 mt-px text-deep-purple-accent-400" stroke="currentColor" viewBox="0 0 52 52">
+                    <polygon stroke-width="4" stroke-linecap="round" stroke-linejoin="round" fill="none"
+                      points="29 13 14 29 25 29 23 39 38 23 27 23"></polygon>
+                  </svg>
+                </span>
+                A slice of heaven
+              </li>
+              <li class="flex">
+                <span class="mr-1">
+                  <svg class="w-5 h-5 mt-px text-deep-purple-accent-400" stroke="currentColor" viewBox="0 0 52 52">
+                    <polygon stroke-width="4" stroke-linecap="round" stroke-linejoin="round" fill="none"
+                      points="29 13 14 29 25 29 23 39 38 23 27 23"></polygon>
+                  </svg>
+                </span>
+                Disrupt inspire
+              </li>
+              <li class="flex">
+                <span class="mr-1">
+                  <svg class="w-5 h-5 mt-px text-deep-purple-accent-400" stroke="currentColor" viewBox="0 0 52 52">
+                    <polygon stroke-width="4" stroke-linecap="round" stroke-linejoin="round" fill="none"
+                      points="29 13 14 29 25 29 23 39 38 23 27 23"></polygon>
+                  </svg>
+                </span>
+                Preliminary thinking
+              </li>
+            </ul>
+            <ul class="space-y-3">
+              <li class="flex">
+                <span class="mr-1">
+                  <svg class="w-5 h-5 mt-px text-deep-purple-accent-400" stroke="currentColor" viewBox="0 0 52 52">
+                    <polygon stroke-width="4" stroke-linecap="round" stroke-linejoin="round" fill="none"
+                      points="29 13 14 29 25 29 23 39 38 23 27 23"></polygon>
+                  </svg>
+                </span>
+                Flipboard curmudgeon
+              </li>
+              <li class="flex">
+                <span class="mr-1">
+                  <svg class="w-5 h-5 mt-px text-deep-purple-accent-400" stroke="currentColor" viewBox="0 0 52 52">
+                    <polygon stroke-width="4" stroke-linecap="round" stroke-linejoin="round" fill="none"
+                      points="29 13 14 29 25 29 23 39 38 23 27 23"></polygon>
+                  </svg>
+                </span>
+                Storage shed
+              </li>
+              <li class="flex">
+                <span class="mr-1">
+                  <svg class="w-5 h-5 mt-px text-deep-purple-accent-400" stroke="currentColor" viewBox="0 0 52 52">
+                    <polygon stroke-width="4" stroke-linecap="round" stroke-linejoin="round" fill="none"
+                      points="29 13 14 29 25 29 23 39 38 23 27 23"></polygon>
+                  </svg>
+                </span>
+                Satoshi Nakamoto
+              </li>
+            </ul>
           </div>
         </div>
-        <div class="grid gap-8 row-gap-10 sm:grid-cols-2 lg:grid-cols-4">
-          <div>
-            <div
-              class="flex items-center justify-center w-16 h-16 mb-4 rounded-full bg-indigo-50"
-            >
-              <svg
-                class="w-7 h-7 text-deep-purple-accent-400"
-                stroke-linecap="round"
-                stroke-width="2"
-                viewBox="0 0 24 24"
-              >
-                <circle
-                  cx="11"
-                  cy="13"
-                  fill="none"
-                  r="9"
-                  stroke="currentColor"
-                ></circle>
-                <path
-                  d=" M21.955,18.005c1.089,2.145,1.378,3.816,0.622,4.572C20.92,24.234,14.799,20.799,9,15S-0.234,3.08,1.423,1.423 C2.18,0.666,3.853,0.956,6,2.047"
-                  stroke="currentColor"
-                  fill="none"
-                ></path>
+        <div>
+          <img class="object-cover w-full h-56 rounded shadow-lg sm:h-96"
+            src="https://images.pexels.com/photos/927022/pexels-photo-927022.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=3&amp;h=750&amp;w=1260"
+            alt="" />
+        </div>
+      </div>
+    </div>
+
+    <!-- End -->
+
+    <div class="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20">
+      <div class="grid gap-10 row-gap-8 lg:grid-cols-3">
+        <div>
+          <div class="flex">
+            <h6 class="mr-2 text-4xl font-bold md:text-5xl text-deep-purple-accent-400 text-[#c5964a]">
+              20+
+            </h6>
+            <div class="flex items-center justify-center rounded-full bg-teal-accent-400 w-7 h-7">
+              <svg class="text-[#c5964a] w-7 h-7" stroke="currentColor" viewBox="0 0 52 52">
+                <polygon stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="none"
+                  points="29 13 14 29 25 29 23 39 38 23 27 23"></polygon>
               </svg>
             </div>
-            <h6 class="mb-2 font-semibold leading-5">Our planet</h6>
-            <p class="mb-3 text-sm text-gray-900">
-              We choose to go to the moon, not because it's easy, but because
-              it's hard.
-            </p>
-            <ul class="mb-4 -ml-1 space-y-2">
-              <li class="flex items-start">
-                <span class="mr-1">
-                  <svg
-                    class="w-5 h-5 mt-px text-deep-purple-accent-400"
-                    stroke="currentColor"
-                    viewBox="0 0 52 52"
-                  >
-                    <polygon
-                      stroke-width="4"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      fill="none"
-                      points="29 13 14 29 25 29 23 39 38 23 27 23"
-                    ></polygon>
-                  </svg>
-                </span>
-                Earth
-              </li>
-              <li class="flex items-start">
-                <span class="mr-1">
-                  <svg
-                    class="w-5 h-5 mt-px text-deep-purple-accent-400"
-                    stroke="currentColor"
-                    viewBox="0 0 52 52"
-                  >
-                    <polygon
-                      stroke-width="4"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      fill="none"
-                      points="29 13 14 29 25 29 23 39 38 23 27 23"
-                    ></polygon>
-                  </svg>
-                </span>
-                Space
-              </li>
-              <li class="flex items-start">
-                <span class="mr-1">
-                  <svg
-                    class="w-5 h-5 mt-px text-deep-purple-accent-400"
-                    stroke="currentColor"
-                    viewBox="0 0 52 52"
-                  >
-                    <polygon
-                      stroke-width="4"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      fill="none"
-                      points="29 13 14 29 25 29 23 39 38 23 27 23"
-                    ></polygon>
-                  </svg>
-                </span>
-                Humans
-              </li>
-            </ul>
-            <a
-              href="/"
-              aria-label=""
-              class="inline-flex items-center font-semibold transition-colors duration-200 text-deep-purple-accent-400 hover:text-deep-purple-800"
-              >Learn more</a
-            >
           </div>
-          <div>
-            <div
-              class="flex items-center justify-center w-16 h-16 mb-4 rounded-full bg-indigo-50"
-            >
-              <svg
-                class="w-7 h-7 text-deep-purple-accent-400"
-                viewBox="0 0 24 24"
-                stroke-linecap="round"
-              >
-                <path
-                  d="M2,10C2,5.029,6.47,1,12,1c5.379,0,10,4.029,10,9S15.712,23,12,23C8.212,23,2,14.971,2,10Z"
-                  fill="none"
-                  stroke-width="2"
-                  stroke="currentColor"
-                ></path>
-                <path
-                  d="M5,9a6.529,6.529,0,0,1,4.393,1.607C10.705,11.92,10,15,10,15a6.59,6.59,0,0,1-3.436-1.564C5.022,11.894,5,9,5,9Z"
-                  fill="none"
-                  stroke-width="1.5"
-                  stroke="currentColor"
-                ></path>
-                <path
-                  d="M19,9a6.523,6.523,0,0,0-4.392,1.608C13.3,11.92,14,15,14,15a6.59,6.59,0,0,0,3.436-1.564C18.978,11.894,19,9,19,9Z"
-                  fill="none"
-                  stroke-width="1.5"
-                  stroke="currentColor"
-                ></path>
+          <p class="mb-2 font-bold md:text-lg text-[#c5964a]">Years of Legacty</p>
+          <p class="text-gray-700">
+            Three movie stars, Chloe, Lexa, and Jon, are filming a movie in the Amazon. They’re very famous and very
+            high-maintenance effort.
+          </p>
+        </div>
+        <div>
+          <div class="flex">
+            <h6 class="mr-2 text-4xl font-bold md:text-5xl text-deep-purple-accent-400 text-[#c5964a]">
+              15+
+            </h6>
+            <div class="flex items-center justify-center rounded-full bg-teal-accent-400 w-7 h-7">
+              <svg class="text-[#c5964a] w-7 h-7" stroke="currentColor" viewBox="0 0 52 52">
+                <polygon stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="none"
+                  points="29 13 14 29 25 29 23 39 38 23 27 23"></polygon>
               </svg>
             </div>
-            <h6 class="mb-2 font-semibold leading-5">Another life</h6>
-            <p class="mb-3 text-sm text-gray-900">
-              There can be no thought of finishing for "aiming for the stars".
-            </p>
-            <ul class="mb-4 -ml-1 space-y-2">
-              <li class="flex items-start">
-                <span class="mr-1">
-                  <svg
-                    class="w-5 h-5 mt-px text-deep-purple-accent-400"
-                    stroke="currentColor"
-                    viewBox="0 0 52 52"
-                  >
-                    <polygon
-                      stroke-width="4"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      fill="none"
-                      points="29 13 14 29 25 29 23 39 38 23 27 23"
-                    ></polygon>
-                  </svg>
-                </span>
-                Life
-              </li>
-              <li class="flex items-start">
-                <span class="mr-1">
-                  <svg
-                    class="w-5 h-5 mt-px text-deep-purple-accent-400"
-                    stroke="currentColor"
-                    viewBox="0 0 52 52"
-                  >
-                    <polygon
-                      stroke-width="4"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      fill="none"
-                      points="29 13 14 29 25 29 23 39 38 23 27 23"
-                    ></polygon>
-                  </svg>
-                </span>
-                Aliens
-              </li>
-              <li class="flex items-start">
-                <span class="mr-1">
-                  <svg
-                    class="w-5 h-5 mt-px text-deep-purple-accent-400"
-                    stroke="currentColor"
-                    viewBox="0 0 52 52"
-                  >
-                    <polygon
-                      stroke-width="4"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      fill="none"
-                      points="29 13 14 29 25 29 23 39 38 23 27 23"
-                    ></polygon>
-                  </svg>
-                </span>
-                Shrek
-              </li>
-            </ul>
-            <a
-              href="/"
-              aria-label=""
-              class="inline-flex items-center font-semibold transition-colors duration-200 text-deep-purple-accent-400 hover:text-deep-purple-800"
-              >Learn more</a
-            >
           </div>
-          <div>
-            <div
-              class="flex items-center justify-center w-16 h-16 mb-4 rounded-full bg-indigo-50"
-            >
-              <svg
-                class="w-7 h-7 text-deep-purple-accent-400"
-                stroke-linecap="round"
-                stroke-width="2"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  d="M8.291,18.709,4.182,22.818c-.419.419-1.43.086-2.258-.742s-1.161-1.839-.742-2.258l4.11-4.11"
-                  fill="none"
-                  stroke="currentColor"
-                ></path>
-                <ellipse
-                  cx="19.078"
-                  cy="4.922"
-                  fill="none"
-                  rx="2.5"
-                  ry="4.95"
-                  stroke="currentColor"
-                  transform="translate(2.107 14.932) rotate(-45)"
-                ></ellipse>
-                <path
-                  d="M9.185,9.815,5.3,13.7c-.7.7-.143,2.382,1.238,3.762S9.6,19.4,10.3,18.7l3.885-3.885"
-                  fill="none"
-                  stroke="currentColor"
-                ></path>
-                <path
-                  d="M15.578,1.422,9.422,7.578c-.976.976-.2,3.335,1.732,5.268s4.292,2.708,5.268,1.732l6.156-6.156"
-                  fill="none"
-                  stroke="currentColor"
-                ></path>
+          <p class="mb-2 font-bold md:text-lg text-[#c5964a]">Years of Legacy</p>
+          <p class="text-gray-700">
+            One day, after filming a scene deep in the rainforest, the three actors and their agents decide to head back
+            to home base by foot.
+          </p>
+        </div>
+        <div>
+          <div class="flex">
+            <h6 class="mr-2 text-4xl font-bold md:text-5xl text-deep-purple-accent-400 text-[#c5964a]">
+              2500+
+            </h6>
+            <div class="flex items-center justify-center rounded-full bg-teal-accent-400 w-7 h-7">
+              <svg class="text-[#c5964a] w-7 h-7" stroke="currentColor" viewBox="0 0 52 52">
+                <polygon stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="none"
+                  points="29 13 14 29 25 29 23 39 38 23 27 23"></polygon>
               </svg>
             </div>
-            <h6 class="mb-2 font-semibold leading-5">Explore space</h6>
-            <p class="mb-3 text-sm text-gray-900">
-              We are all connected to the universe atomically, strong bonds.
-            </p>
-            <ul class="mb-4 -ml-1 space-y-2">
-              <li class="flex items-start">
-                <span class="mr-1">
-                  <svg
-                    class="w-5 h-5 mt-px text-deep-purple-accent-400"
-                    stroke="currentColor"
-                    viewBox="0 0 52 52"
-                  >
-                    <polygon
-                      stroke-width="4"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      fill="none"
-                      points="29 13 14 29 25 29 23 39 38 23 27 23"
-                    ></polygon>
-                  </svg>
-                </span>
-                Infinity
-              </li>
-              <li class="flex items-start">
-                <span class="mr-1">
-                  <svg
-                    class="w-5 h-5 mt-px text-deep-purple-accent-400"
-                    stroke="currentColor"
-                    viewBox="0 0 52 52"
-                  >
-                    <polygon
-                      stroke-width="4"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      fill="none"
-                      points="29 13 14 29 25 29 23 39 38 23 27 23"
-                    ></polygon>
-                  </svg>
-                </span>
-                Stars
-              </li>
-              <li class="flex items-start">
-                <span class="mr-1">
-                  <svg
-                    class="w-5 h-5 mt-px text-deep-purple-accent-400"
-                    stroke="currentColor"
-                    viewBox="0 0 52 52"
-                  >
-                    <polygon
-                      stroke-width="4"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      fill="none"
-                      points="29 13 14 29 25 29 23 39 38 23 27 23"
-                    ></polygon>
-                  </svg>
-                </span>
-                Black Holes
-              </li>
-            </ul>
-            <a
-              href="/"
-              aria-label=""
-              class="inline-flex items-center font-semibold transition-colors duration-200 text-deep-purple-accent-400 hover:text-deep-purple-800"
-              >Learn more</a
-            >
           </div>
-          <div>
-            <div
-              class="flex items-center justify-center w-16 h-16 mb-4 rounded-full bg-indigo-50"
-            >
-              <svg
-                class="w-7 h-7 text-deep-purple-accent-400"
-                stroke-linecap="round"
-                stroke-width="2"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  d="M8,13l3,3,9.379-9.379a2.122,2.122,0,0,0,0-3h0a2.122,2.122,0,0,0-3,0Z"
-                  fill="none"
-                  stroke="currentColor"
-                ></path>
-                <polyline
-                  fill="none"
-                  points="10 11 10 6 6 2 3 5 7 9"
-                  stroke="currentColor"
-                ></polyline>
-                <polyline
-                  fill="none"
-                  points="15 12 15 17 19 21 22 18 18 14"
-                  stroke="currentColor"
-                ></polyline>
-                <path
-                  d="M8,23a7,7,0,0,1-7-7"
-                  fill="none"
-                  stroke="currentColor"
-                ></path>
-                <path
-                  d="M8,19a3,3,0,0,1-3-3"
-                  fill="none"
-                  stroke="currentColor"
-                ></path>
+          <p class="mb-2 font-bold md:text-lg text-[#c5964a]">Happy Residants</p>
+          <p class="text-gray-700">
+            Suddenly, they come to a large river. On the riverbank, they find a small rowboat, but it’s only big enough
+            to hold two of them at one time.
+          </p>
+        </div>
+      </div>
+      <div class="flex flex-col md:flex-row gap-10 justify-center mt-10">
+        <div>
+          <div class="flex">
+            <h6 class="mr-2 text-4xl font-bold md:text-5xl text-deep-purple-accent-400 text-[#c5964a]">
+              2.2M+
+            </h6>
+            <div class="flex items-center justify-center rounded-full bg-teal-accent-400 w-7 h-7">
+              <svg class="text-[#c5964a] w-7 h-7" stroke="currentColor" viewBox="0 0 52 52">
+                <polygon stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="none"
+                  points="29 13 14 29 25 29 23 39 38 23 27 23"></polygon>
               </svg>
             </div>
-            <h6 class="mb-2 font-semibold leading-5">First contact</h6>
-            <p class="mb-3 text-sm text-gray-900">
-              For those who have seen the Earth from space or in dreams.
-            </p>
-            <ul class="mb-4 -ml-1 space-y-2">
-              <li class="flex items-start">
-                <span class="mr-1">
-                  <svg
-                    class="w-5 h-5 mt-px text-deep-purple-accent-400"
-                    stroke="currentColor"
-                    viewBox="0 0 52 52"
-                  >
-                    <polygon
-                      stroke-width="4"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      fill="none"
-                      points="29 13 14 29 25 29 23 39 38 23 27 23"
-                    ></polygon>
-                  </svg>
-                </span>
-                Listen
-              </li>
-              <li class="flex items-start">
-                <span class="mr-1">
-                  <svg
-                    class="w-5 h-5 mt-px text-deep-purple-accent-400"
-                    stroke="currentColor"
-                    viewBox="0 0 52 52"
-                  >
-                    <polygon
-                      stroke-width="4"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      fill="none"
-                      points="29 13 14 29 25 29 23 39 38 23 27 23"
-                    ></polygon>
-                  </svg>
-                </span>
-                Communicate
-              </li>
-              <li class="flex items-start">
-                <span class="mr-1">
-                  <svg
-                    class="w-5 h-5 mt-px text-deep-purple-accent-400"
-                    stroke="currentColor"
-                    viewBox="0 0 52 52"
-                  >
-                    <polygon
-                      stroke-width="4"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      fill="none"
-                      points="29 13 14 29 25 29 23 39 38 23 27 23"
-                    ></polygon>
-                  </svg>
-                </span>
-                Run
-              </li>
-            </ul>
-            <a
-              href="/"
-              aria-label=""
-              class="inline-flex items-center font-semibold transition-colors duration-200 text-deep-purple-accent-400 hover:text-deep-purple-800"
-              >Learn more</a
-            >
           </div>
+          <p class="mb-2 font-bold md:text-lg text-[#c5964a]">Sq. Ft Completed Projects</p>
+          <p class="text-gray-700">
+            One day, after filming a scene deep in the rainforest, the three actors and their agents decide to head back
+            to home base by foot.
+          </p>
+        </div>
+        <div>
+          <div class="flex">
+            <h6 class="mr-2 text-4xl font-bold md:text-5xl text-deep-purple-accent-400 text-[#c5964a]">
+              4.4M+
+            </h6>
+            <div class="flex items-center justify-center rounded-full bg-teal-accent-400 w-7 h-7">
+              <svg class="text-[#c5964a] w-7 h-7" stroke="currentColor" viewBox="0 0 52 52">
+                <polygon stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="none"
+                  points="29 13 14 29 25 29 23 39 38 23 27 23"></polygon>
+              </svg>
+            </div>
+          </div>
+          <p class="mb-2 font-bold md:text-lg text-[#c5964a]">Sq. Ft Under Construction Projects</p>
+          <p class="text-gray-700">
+            Suddenly, they come to a large river. On the riverbank, they find a small rowboat, but it’s only big enough
+            to hold two of them at one time.
+          </p>
         </div>
       </div>
 
-      <!-- footer -->
+    </div>
+    <!-- End -->
 
-      <footer class="footer">
-        <div class="footer-container">
-          <!-- Left Column -->
-          <div class="footer-left">
-            <div class="footer-item">
-              <h3 class="footer-title">Strategic Partner</h3>
-              <img
-                src="./assets/images/maestro logo white.webp"
-                alt="Partner Logo"
-                class="footer-logo"
-              />
-            </div>
-            <div class="footer-item">
-              <img
-                src="./assets/images/menlo_logo-removebg-preview.webp"
-                alt="Project Logo"
-                class="footer-logo"
-              />
-            </div>
-            <div class="footer-item">
-              <h3 class="footer-title">Location</h3>
-              <p class="footer-text">Pune, Maharashtra 411021</p>
-            </div>
-            <div class="footer-item">
-              <h3 class="footer-title">Scan QR Code</h3>
-              <img
-                src="./assets/images/qrR.jpg"
-                alt="QR Code"
-                class="footer-qr-code"
-              />
-            </div>
-            <div class="footer-item">
-              <a href="https://maharera.mahaonline.gov.in" class="footer-link"
-                >https://maharera.mahaonline.gov.in</a
-              >
-              <p class="footer-text">P52100050863</p>
-            </div>
+    <!-- End -->
+
+    <div class="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20">
+      <div class="flex flex-col mb-6 lg:flex-row md:mb-10">
+        <div class="lg:w-1/2">
+          <h2
+            class="max-w-md mb-6 font-sans text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl sm:leading-none xl:max-w-lg">
+            To conquer the space you must trust.
+          </h2>
+        </div>
+        <div class="lg:w-1/2">
+          <p class="text-base text-gray-700 md:text-lg">
+            For those who have seen the Earth from space, and for the hundreds
+            and perhaps thousands more who will, the experience most certainly
+            changes your perspective.
+          </p>
+        </div>
+      </div>
+      <div class="grid gap-8 row-gap-10 sm:grid-cols-2 lg:grid-cols-4">
+        <div>
+          <div class="flex items-center justify-center w-16 h-16 mb-4 rounded-full bg-indigo-50">
+            <svg class="w-7 h-7 text-deep-purple-accent-400" stroke-linecap="round" stroke-width="2"
+              viewBox="0 0 24 24">
+              <circle cx="11" cy="13" fill="none" r="9" stroke="currentColor"></circle>
+              <path
+                d=" M21.955,18.005c1.089,2.145,1.378,3.816,0.622,4.572C20.92,24.234,14.799,20.799,9,15S-0.234,3.08,1.423,1.423 C2.18,0.666,3.853,0.956,6,2.047"
+                stroke="currentColor" fill="none"></path>
+            </svg>
           </div>
+          <h6 class="mb-2 font-semibold leading-5">Our planet</h6>
+          <p class="mb-3 text-sm text-gray-900">
+            We choose to go to the moon, not because it's easy, but because
+            it's hard.
+          </p>
+          <ul class="mb-4 -ml-1 space-y-2">
+            <li class="flex items-start">
+              <span class="mr-1">
+                <svg class="w-5 h-5 mt-px text-deep-purple-accent-400" stroke="currentColor" viewBox="0 0 52 52">
+                  <polygon stroke-width="4" stroke-linecap="round" stroke-linejoin="round" fill="none"
+                    points="29 13 14 29 25 29 23 39 38 23 27 23"></polygon>
+                </svg>
+              </span>
+              Earth
+            </li>
+            <li class="flex items-start">
+              <span class="mr-1">
+                <svg class="w-5 h-5 mt-px text-deep-purple-accent-400" stroke="currentColor" viewBox="0 0 52 52">
+                  <polygon stroke-width="4" stroke-linecap="round" stroke-linejoin="round" fill="none"
+                    points="29 13 14 29 25 29 23 39 38 23 27 23"></polygon>
+                </svg>
+              </span>
+              Space
+            </li>
+            <li class="flex items-start">
+              <span class="mr-1">
+                <svg class="w-5 h-5 mt-px text-deep-purple-accent-400" stroke="currentColor" viewBox="0 0 52 52">
+                  <polygon stroke-width="4" stroke-linecap="round" stroke-linejoin="round" fill="none"
+                    points="29 13 14 29 25 29 23 39 38 23 27 23"></polygon>
+                </svg>
+              </span>
+              Humans
+            </li>
+          </ul>
+          <a href="/" aria-label=""
+            class="inline-flex items-center font-semibold transition-colors duration-200 text-deep-purple-accent-400 hover:text-deep-purple-800">Learn
+            more</a>
+        </div>
+        <div>
+          <div class="flex items-center justify-center w-16 h-16 mb-4 rounded-full bg-indigo-50">
+            <svg class="w-7 h-7 text-deep-purple-accent-400" viewBox="0 0 24 24" stroke-linecap="round">
+              <path d="M2,10C2,5.029,6.47,1,12,1c5.379,0,10,4.029,10,9S15.712,23,12,23C8.212,23,2,14.971,2,10Z"
+                fill="none" stroke-width="2" stroke="currentColor"></path>
+              <path
+                d="M5,9a6.529,6.529,0,0,1,4.393,1.607C10.705,11.92,10,15,10,15a6.59,6.59,0,0,1-3.436-1.564C5.022,11.894,5,9,5,9Z"
+                fill="none" stroke-width="1.5" stroke="currentColor"></path>
+              <path
+                d="M19,9a6.523,6.523,0,0,0-4.392,1.608C13.3,11.92,14,15,14,15a6.59,6.59,0,0,0,3.436-1.564C18.978,11.894,19,9,19,9Z"
+                fill="none" stroke-width="1.5" stroke="currentColor"></path>
+            </svg>
+          </div>
+          <h6 class="mb-2 font-semibold leading-5">Another life</h6>
+          <p class="mb-3 text-sm text-gray-900">
+            There can be no thought of finishing for "aiming for the stars".
+          </p>
+          <ul class="mb-4 -ml-1 space-y-2">
+            <li class="flex items-start">
+              <span class="mr-1">
+                <svg class="w-5 h-5 mt-px text-deep-purple-accent-400" stroke="currentColor" viewBox="0 0 52 52">
+                  <polygon stroke-width="4" stroke-linecap="round" stroke-linejoin="round" fill="none"
+                    points="29 13 14 29 25 29 23 39 38 23 27 23"></polygon>
+                </svg>
+              </span>
+              Life
+            </li>
+            <li class="flex items-start">
+              <span class="mr-1">
+                <svg class="w-5 h-5 mt-px text-deep-purple-accent-400" stroke="currentColor" viewBox="0 0 52 52">
+                  <polygon stroke-width="4" stroke-linecap="round" stroke-linejoin="round" fill="none"
+                    points="29 13 14 29 25 29 23 39 38 23 27 23"></polygon>
+                </svg>
+              </span>
+              Aliens
+            </li>
+            <li class="flex items-start">
+              <span class="mr-1">
+                <svg class="w-5 h-5 mt-px text-deep-purple-accent-400" stroke="currentColor" viewBox="0 0 52 52">
+                  <polygon stroke-width="4" stroke-linecap="round" stroke-linejoin="round" fill="none"
+                    points="29 13 14 29 25 29 23 39 38 23 27 23"></polygon>
+                </svg>
+              </span>
+              Shrek
+            </li>
+          </ul>
+          <a href="/" aria-label=""
+            class="inline-flex items-center font-semibold transition-colors duration-200 text-deep-purple-accent-400 hover:text-deep-purple-800">Learn
+            more</a>
+        </div>
+        <div>
+          <div class="flex items-center justify-center w-16 h-16 mb-4 rounded-full bg-indigo-50">
+            <svg class="w-7 h-7 text-deep-purple-accent-400" stroke-linecap="round" stroke-width="2"
+              viewBox="0 0 24 24">
+              <path d="M8.291,18.709,4.182,22.818c-.419.419-1.43.086-2.258-.742s-1.161-1.839-.742-2.258l4.11-4.11"
+                fill="none" stroke="currentColor"></path>
+              <ellipse cx="19.078" cy="4.922" fill="none" rx="2.5" ry="4.95" stroke="currentColor"
+                transform="translate(2.107 14.932) rotate(-45)"></ellipse>
+              <path d="M9.185,9.815,5.3,13.7c-.7.7-.143,2.382,1.238,3.762S9.6,19.4,10.3,18.7l3.885-3.885" fill="none"
+                stroke="currentColor"></path>
+              <path d="M15.578,1.422,9.422,7.578c-.976.976-.2,3.335,1.732,5.268s4.292,2.708,5.268,1.732l6.156-6.156"
+                fill="none" stroke="currentColor"></path>
+            </svg>
+          </div>
+          <h6 class="mb-2 font-semibold leading-5">Explore space</h6>
+          <p class="mb-3 text-sm text-gray-900">
+            We are all connected to the universe atomically, strong bonds.
+          </p>
+          <ul class="mb-4 -ml-1 space-y-2">
+            <li class="flex items-start">
+              <span class="mr-1">
+                <svg class="w-5 h-5 mt-px text-deep-purple-accent-400" stroke="currentColor" viewBox="0 0 52 52">
+                  <polygon stroke-width="4" stroke-linecap="round" stroke-linejoin="round" fill="none"
+                    points="29 13 14 29 25 29 23 39 38 23 27 23"></polygon>
+                </svg>
+              </span>
+              Infinity
+            </li>
+            <li class="flex items-start">
+              <span class="mr-1">
+                <svg class="w-5 h-5 mt-px text-deep-purple-accent-400" stroke="currentColor" viewBox="0 0 52 52">
+                  <polygon stroke-width="4" stroke-linecap="round" stroke-linejoin="round" fill="none"
+                    points="29 13 14 29 25 29 23 39 38 23 27 23"></polygon>
+                </svg>
+              </span>
+              Stars
+            </li>
+            <li class="flex items-start">
+              <span class="mr-1">
+                <svg class="w-5 h-5 mt-px text-deep-purple-accent-400" stroke="currentColor" viewBox="0 0 52 52">
+                  <polygon stroke-width="4" stroke-linecap="round" stroke-linejoin="round" fill="none"
+                    points="29 13 14 29 25 29 23 39 38 23 27 23"></polygon>
+                </svg>
+              </span>
+              Black Holes
+            </li>
+          </ul>
+          <a href="/" aria-label=""
+            class="inline-flex items-center font-semibold transition-colors duration-200 text-deep-purple-accent-400 hover:text-deep-purple-800">Learn
+            more</a>
+        </div>
+        <div>
+          <div class="flex items-center justify-center w-16 h-16 mb-4 rounded-full bg-indigo-50">
+            <svg class="w-7 h-7 text-deep-purple-accent-400" stroke-linecap="round" stroke-width="2"
+              viewBox="0 0 24 24">
+              <path d="M8,13l3,3,9.379-9.379a2.122,2.122,0,0,0,0-3h0a2.122,2.122,0,0,0-3,0Z" fill="none"
+                stroke="currentColor"></path>
+              <polyline fill="none" points="10 11 10 6 6 2 3 5 7 9" stroke="currentColor"></polyline>
+              <polyline fill="none" points="15 12 15 17 19 21 22 18 18 14" stroke="currentColor"></polyline>
+              <path d="M8,23a7,7,0,0,1-7-7" fill="none" stroke="currentColor"></path>
+              <path d="M8,19a3,3,0,0,1-3-3" fill="none" stroke="currentColor"></path>
+            </svg>
+          </div>
+          <h6 class="mb-2 font-semibold leading-5">First contact</h6>
+          <p class="mb-3 text-sm text-gray-900">
+            For those who have seen the Earth from space or in dreams.
+          </p>
+          <ul class="mb-4 -ml-1 space-y-2">
+            <li class="flex items-start">
+              <span class="mr-1">
+                <svg class="w-5 h-5 mt-px text-deep-purple-accent-400" stroke="currentColor" viewBox="0 0 52 52">
+                  <polygon stroke-width="4" stroke-linecap="round" stroke-linejoin="round" fill="none"
+                    points="29 13 14 29 25 29 23 39 38 23 27 23"></polygon>
+                </svg>
+              </span>
+              Listen
+            </li>
+            <li class="flex items-start">
+              <span class="mr-1">
+                <svg class="w-5 h-5 mt-px text-deep-purple-accent-400" stroke="currentColor" viewBox="0 0 52 52">
+                  <polygon stroke-width="4" stroke-linecap="round" stroke-linejoin="round" fill="none"
+                    points="29 13 14 29 25 29 23 39 38 23 27 23"></polygon>
+                </svg>
+              </span>
+              Communicate
+            </li>
+            <li class="flex items-start">
+              <span class="mr-1">
+                <svg class="w-5 h-5 mt-px text-deep-purple-accent-400" stroke="currentColor" viewBox="0 0 52 52">
+                  <polygon stroke-width="4" stroke-linecap="round" stroke-linejoin="round" fill="none"
+                    points="29 13 14 29 25 29 23 39 38 23 27 23"></polygon>
+                </svg>
+              </span>
+              Run
+            </li>
+          </ul>
+          <a href="/" aria-label=""
+            class="inline-flex items-center font-semibold transition-colors duration-200 text-deep-purple-accent-400 hover:text-deep-purple-800">Learn
+            more</a>
+        </div>
+      </div>
+    </div>
 
-          <!-- Right Column -->
-          <div class="footer-right">
-            <h3 class="footer-form-title">
-              Begin Your Journey to Serene Living!
-            </h3>
-            <form action="#" method="POST" class="footer-form">
-              <div class="form-field">
-                <label for="name">Name</label>
-                <input type="text" id="name" name="name" required />
-              </div>
-              <div class="form-field">
-                <label for="email">Email</label>
-                <input type="email" id="email" name="email" required />
-              </div>
-              <div class="form-field">
-                <label for="phone">Phone</label>
-                <input type="tel" id="phone" name="phone" required />
-              </div>
-              <!-- <div class="form-field checkbox">
+    <!-- footer -->
+
+    <footer class="footer">
+      <div class="footer-container">
+        <!-- Left Column -->
+        <div class="footer-left">
+          <div class="footer-item">
+            <h3 class="footer-title">Strategic Partner</h3>
+            <img src="./assets/images/maestro logo white.webp" alt="Partner Logo" class="footer-logo" />
+          </div>
+          <div class="footer-item">
+            <img src="./assets/images/menlo_logo-removebg-preview.webp" alt="Project Logo" class="footer-logo" />
+          </div>
+          <div class="footer-item">
+            <h3 class="footer-title">Location</h3>
+            <p class="footer-text">Pune, Maharashtra 411021</p>
+          </div>
+          <div class="footer-item">
+            <h3 class="footer-title">Scan QR Code</h3>
+            <img src="./assets/images/qrR.jpg" alt="QR Code" class="footer-qr-code" />
+          </div>
+          <div class="footer-item">
+            <a href="https://maharera.mahaonline.gov.in" class="footer-link">https://maharera.mahaonline.gov.in</a>
+            <p class="footer-text">P52100050863</p>
+          </div>
+        </div>
+
+        <!-- Right Column -->
+        <div class="footer-right">
+          <h3 class="footer-form-title">
+            Begin Your Journey to Serene Living!
+          </h3>
+          <form action="#" method="POST" class="footer-form">
+            <div class="form-field">
+              <label for="name">Name</label>
+              <input type="text" id="name" name="name" required />
+            </div>
+            <div class="form-field">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" required />
+            </div>
+            <div class="form-field">
+              <label for="phone">Phone</label>
+              <input type="tel" id="phone" name="phone" required />
+            </div>
+            <!-- <div class="form-field checkbox">
                         <input type="checkbox" id="consent" name="consent">
                         <label for="consent">I authorize Codename Livecool and its representatives to Call, SMS, Email, or WhatsApp me about its products and offers. This consent overrides any registration for DNC / NDNC.</label>
                     </div> -->
-              <button type="submit" class="footer-button">Submit</button>
-            </form>
-            <div class="custom-social-links">
-              <a
-                href="https://www.instagram.com/codenamelivecool?igsh=MWI3OWVwaXlkcmt3cQ=="
-                target="_blank"
-                class="custom-social-icon"
-              >
-                <img src="./assets/images/instagram.png" alt="Instagram" />
-              </a>
-              <a
-                href="https://www.facebook.com/share/1X22iS7HzA/"
-                target="_blank"
-                class="custom-social-icon"
-              >
-                <img src="./assets/images/facebook.png" alt="Facebook" />
-              </a>
-              <a
-                href="https://youtube.com/@codenamelivecool?si=_BzqAdbBV3wmq58w"
-                target="_blank"
-                class="custom-social-icon"
-              >
-                <img src="./assets/images/youtube.png" alt="YouTube" />
-              </a>
-            </div>
+            <button type="submit" class="footer-button">Submit</button>
+          </form>
+          <div class="custom-social-links">
+            <a href="https://www.instagram.com/codenamelivecool?igsh=MWI3OWVwaXlkcmt3cQ==" target="_blank"
+              class="custom-social-icon">
+              <img src="./assets/images/instagram.png" alt="Instagram" />
+            </a>
+            <a href="https://www.facebook.com/share/1X22iS7HzA/" target="_blank" class="custom-social-icon">
+              <img src="./assets/images/facebook.png" alt="Facebook" />
+            </a>
+            <a href="https://youtube.com/@codenamelivecool?si=_BzqAdbBV3wmq58w" target="_blank"
+              class="custom-social-icon">
+              <img src="./assets/images/youtube.png" alt="YouTube" />
+            </a>
           </div>
         </div>
+      </div>
 
-        <!-- Footer Text (Center) -->
-        <div class="footer-text-center">
-          <p>
-            &copy; 2025 |
-            <a href="./privacy-policy.html" class="footer-link"
-              >Privacy Policy</a
-            >
-            | Terms and Conditions
-          </p>
-        </div>
-      </footer>
-    </main>
+      <!-- Footer Text (Center) -->
+      <div class="footer-text-center">
+        <p>
+          &copy; 2025 |
+          <a href="./privacy-policy.html" class="footer-link">Privacy Policy</a>
+          | Terms and Conditions
+        </p>
+      </div>
+    </footer>
+  </main>
 
-    <a
-      id="instagramBtn"
-      class="social-btn"
-      href="https://www.instagram.com/codenamelivecool?igsh=MWI3OWVwaXlkcmt3cQ=="
-      target="_blank"
-    >
-      <img src="./assets/images/instagram.png" alt="Instagram" />
-    </a>
+  <a id="instagramBtn" class="social-btn" href="https://www.instagram.com/codenamelivecool?igsh=MWI3OWVwaXlkcmt3cQ=="
+    target="_blank">
+    <img src="./assets/images/instagram.png" alt="Instagram" />
+  </a>
 
-    <a
-      id="facebookBtn"
-      class="social-btn"
-      href="https://www.facebook.com/share/1X22iS7HzA/"
-      target="_blank"
-    >
-      <img src="./assets/images/facebook.png" alt="Facebook" />
-    </a>
+  <a id="facebookBtn" class="social-btn" href="https://www.facebook.com/share/1X22iS7HzA/" target="_blank">
+    <img src="./assets/images/facebook.png" alt="Facebook" />
+  </a>
 
-    <a
-      id="youtubeBtn"
-      class="social-btn"
-      href="https://youtube.com/@codenamelivecool?si=_BzqAdbBV3wmq58w"
-      target="_blank"
-    >
-      <img src="./assets/images/youtube.png" alt="YouTube" />
-    </a>
+  <a id="youtubeBtn" class="social-btn" href="https://youtube.com/@codenamelivecool?si=_BzqAdbBV3wmq58w"
+    target="_blank">
+    <img src="./assets/images/youtube.png" alt="YouTube" />
+  </a>
 
-    <button id="backToTopBtn">↑</button>
-    <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.js"></script>
-    <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"
-      integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    ></script>
-    <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"
-      integrity="sha512-onMTRKJBKz8M1TnqqDuGBlowlH0ohFzMXYRNebz+yOcc5TQr/zAKsthzhuv0hiyUKEiQEQXEynnXCvNTOk50dg=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    ></script>
-    <script src="scripts.js"></script>
-  </body>
+  <button id="backToTopBtn">↑</button>
+  <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"
+    integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"
+    integrity="sha512-onMTRKJBKz8M1TnqqDuGBlowlH0ohFzMXYRNebz+yOcc5TQr/zAKsthzhuv0hiyUKEiQEQXEynnXCvNTOk50dg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="scripts.js"></script>
+</body>
+
 </html>
